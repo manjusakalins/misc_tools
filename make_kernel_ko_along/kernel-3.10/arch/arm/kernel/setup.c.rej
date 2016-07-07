@@ -1,0 +1,25 @@
+--- arch/arm/kernel/setup.c
++++ arch/arm/kernel/setup.c
+@@ -450,6 +479,9 @@
+ static int __init topology_init(void)
+ {
+ 	int i;
++	unsigned char *hwinfos = get_hw_info();
++	to_mod_cpu = (unsigned int)hwinfos[18];
++    plat_cpu = (unsigned int)hwinfos[19];
+ 
+ 	for_each_possible_cpu(i) {
+ 		struct cpu *cpu = &per_cpu(cpu_data, i);
+@@ -596,8 +704,12 @@
+ 
+ 	seq_puts(m, "\n");
+ 
++    if (plat_cpu != 0) {
++    	seq_printf(m, "Hardware\t: %s\n", fplatform[plat_cpu]);
++    }else
+ 	seq_printf(m, "Hardware\t: %s\n", machine_name);
+ 
++
+ 	return 0;
+ }
+ 
