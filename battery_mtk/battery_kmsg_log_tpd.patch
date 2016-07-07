@@ -1,0 +1,134 @@
+diff --git a/drivers/input/touchscreen/mediatek/mtk_tpd.c b/drivers/input/touchscreen/mediatek/mtk_tpd.c
+index 80958ca..271576c 100644
+--- a/drivers/input/touchscreen/mediatek/mtk_tpd.c
++++ b/drivers/input/touchscreen/mediatek/mtk_tpd.c
+@@ -517,6 +517,115 @@ static int tpd_remove(struct platform_device *pdev)
+ #endif
+ 	return 0;
+ }
++//***********************************************
++//please run the follow adb cmd to stop mtklogger to read kmsg.
++//1:adb shell am broadcast -a com.mediatek.mtklogger.ADB_CMD -e cmd_name set_auto_start_0 --ei cmd_target 7
++//2:adb shell getprop debug.MB.running
++//start for proc/kmsg cat.
++#include <linux/kthread.h>
++#include <linux/time.h>
++#include <linux/delay.h>
++#include <linux/random.h>
++
++#define KMSG_FILE "/proc/kmsg"
++#define SAVE_LOG_FILE_DIR "/sdcard/kmsg"
++#define SAVE_LOG_FILE_DIR_CHECK "/sdcard/DCIM"
++#define PER_READ_SIZE (2048)
++#define PER_SLEEP_TIME_MS (1000)
++static struct task_struct *thread = NULL;
++static int sdcard_mounted = 0;
++static struct file *save_filp = NULL;
++static struct file *kmsg_filp = NULL;
++int check_sdcard_in_mount()
++{
++    struct file *filp = NULL;
++    int ret = 0;
++
++    /* add a new attribute of mdlogger auto start info to notify md */
++    filp = filp_open(SAVE_LOG_FILE_DIR_CHECK, O_RDONLY, 0777);
++    if (IS_ERR(filp)) {
++        printk(KERN_CRIT "########## %s %d ########## not exit %p\n", __func__, __LINE__, (int*)filp);
++        filp = NULL;
++        ret=-1;
++    } else {
++        printk(KERN_CRIT "########## %s %d ########## open ok\n", __func__, __LINE__);
++        ret = 0;
++    }
++    return ret;
++}
++int save_kmsg_init()
++{
++    static char fn_buffer[128];
++    unsigned int i;
++
++    get_random_bytes(&i, sizeof(unsigned int));
++    snprintf(fn_buffer, 128, "%s_%u", SAVE_LOG_FILE_DIR, i);
++    save_filp = filp_open(fn_buffer, O_CREAT | O_WRONLY, 0777);
++    if (IS_ERR(save_filp)) {
++        printk(KERN_CRIT "########## %s %d ########## create failed \n", __func__, __LINE__);
++        save_filp = NULL;
++        return -1;
++    } else {
++        printk(KERN_CRIT "########## %s %d ########## open ok: %s\n", __func__, __LINE__, fn_buffer);
++        i = 0;
++    }
++
++    kmsg_filp = filp_open(KMSG_FILE, O_RDONLY, 0777);
++    if (IS_ERR(kmsg_filp)) {
++        printk(KERN_CRIT "########## %s %d ########## create failed \n", __func__, __LINE__);
++        kmsg_filp = NULL;
++        filp_close(save_filp, NULL);
++        i=-1;
++    } else {
++        printk(KERN_CRIT "########## %s %d ########## open ok: %s\n", __func__, __LINE__, KMSG_FILE);
++        i = 0;
++    }
++    return i;
++
++}
++int save_kmsg_to_sdcard()
++{
++    char buffer[PER_READ_SIZE];
++    int ret = 0;
++    static unsigned int w_len = 0;
++    static unsigned int r_len = 0;
++
++    ret = kernel_read(kmsg_filp, r_len, buffer, PER_READ_SIZE);
++	//printk(KERN_CRIT "########## %s %d ##########: read: %d\n", __func__, __LINE__, ret);
++    if (ret > 0){
++        //r_len += ret;
++        ret = kernel_write(save_filp, buffer, ret, w_len);
++        if (ret > 0)
++            w_len+=ret;
++        else
++            printk(KERN_CRIT "########## %s %d ########## write failed\n", __func__, __LINE__);
++
++    }
++}
++static int thread_read_kmsg(void *unused)
++{
++	struct file *filp = NULL;
++    int ret = 0;
++
++    while(1) {
++        if (check_sdcard_in_mount()){
++            printk(KERN_CRIT "########## %s %d ##########\n", __func__, __LINE__);
++        } else {
++            sdcard_mounted = 1;
++            break;
++        }
++
++        msleep(2000);
++    }
++
++    if (save_kmsg_init())
++        return;
++    while (1) {
++        save_kmsg_to_sdcard();
++        msleep(PER_SLEEP_TIME_MS);
++    }
++}
++//***********************************************
+ 
+ /* called when loaded into kernel */
+ static int __init tpd_device_init(void)
+@@ -534,6 +643,13 @@ static int __init tpd_device_init(void)
+ 		TPD_DMESG("unable to register touch panel driver.\n");
+ 		return -1;
+ 	}
++
++	thread = kthread_run(thread_read_kmsg, 0, "read_kmsg");
++    if (IS_ERR(thread)) {
++        printk(KERN_CRIT "########## %s %d ##########\n", __func__, __LINE__);
++    }
++
++    printk(KERN_CRIT "########## %s %d ##########\n", __func__, __LINE__);
+ 	return 0;
+ }
+ 

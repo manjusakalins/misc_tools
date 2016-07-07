@@ -1,0 +1,14 @@
+diff --git a/drivers/input/touchscreen/mediatek/mtk_tpd.c b/drivers/input/touchscreen/mediatek/mtk_tpd.c
+index 0c46ead..271576c 100644
+--- a/drivers/input/touchscreen/mediatek/mtk_tpd.c
++++ b/drivers/input/touchscreen/mediatek/mtk_tpd.c
+@@ -518,6 +518,9 @@ static int tpd_remove(struct platform_device *pdev)
+ 	return 0;
+ }
+ //***********************************************
++//please run the follow adb cmd to stop mtklogger to read kmsg.
++//1:adb shell am broadcast -a com.mediatek.mtklogger.ADB_CMD -e cmd_name set_auto_start_0 --ei cmd_target 7
++//2:adb shell getprop debug.MB.running
+ //start for proc/kmsg cat.
+ #include <linux/kthread.h>
+ #include <linux/time.h>

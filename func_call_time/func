@@ -1,0 +1,38 @@
+u32 duration, blktime;
+static struct timespec timespec_start[HOST_MAX_NUM];
+static struct timespec timespec_end[HOST_MAX_NUM];
+
+get_monotonic_boottime(&timespec_start[host->id]);
+get_monotonic_boottime(&timespec_end[host->id]);
+timespec_diff_ns(timespec_start[host->id], timespec_end[host->id], duration);
+
+
+
+
+void time_get_cur_boot_time(int *sec, int *usec)
+{
+    unsigned long long t;
+    unsigned long nanosec_rem;
+    t = cpu_clock(0);
+    nanosec_rem = do_div(t, 1000000000);
+    //tlen = sprintf(tbuf, "[%5lu.%06lu]%c", (unsigned long) t, nanosec_rem / 1000, state);
+    //if (*usec == 0 && *sec == 0) {
+        *sec = (unsigned long)t;
+        *usec = nanosec_rem/1000;
+    //}
+}
+EXPORT_SYMBOL(time_get_cur_boot_time);
+
+
+
+
+unsigned long long tcpu;
+unsigned long long tcpu2;
+unsigned long nanosec_rem;
+
+    tcpu = cpu_clock(0);
+
+    tcpu2 = cpu_clock(0);
+    tcpu = tcpu2 - tcpu;
+    nanosec_rem = do_div(tcpu, 1000000000);
+    printk("%s %d ====== %5lu.%06lu", __func__, __LINE__, (unsigned long)tcpu, nanosec_rem / 1000);

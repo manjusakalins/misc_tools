@@ -1,0 +1,336 @@
+{
+	switch(cmd) {
+	case DISP_IOCTL_DESTROY_SESSION:
+	{
+		printk("###############DISP_IOCTL_DESTROY_SESSION\n");
+		break;
+	}
+	case DISP_IOCTL_TRIGGER_SESSION:
+	{
+		printk("###############DISP_IOCTL_TRIGGER_SESSION\n");
+		break;
+	}
+	case DISP_IOCTL_PREPARE_INPUT_BUFFER:
+	{
+		printk("###############DISP_IOCTL_PREPARE_INPUT_BUFFER\n");
+		break;
+	}
+	case DISP_IOCTL_PREPARE_OUTPUT_BUFFER:
+	{
+		printk("###############DISP_IOCTL_PREPARE_OUTPUT_BUFFER\n");
+		break;
+	}
+	case DISP_IOCTL_SET_INPUT_BUFFER:
+	{
+		printk("###############DISP_IOCTL_SET_INPUT_BUFFER\n");
+		break;
+	}
+	case DISP_IOCTL_SET_OUTPUT_BUFFER:
+	{
+		printk("###############DISP_IOCTL_SET_OUTPUT_BUFFER\n");
+		break;
+	}
+	case DISP_IOCTL_GET_SESSION_INFO:
+	{
+		printk("###############DISP_IOCTL_GET_SESSION_INFO\n");
+		break;
+	}
+	case DISP_IOCTL_SET_SESSION_MODE:
+	{
+		printk("###############DISP_IOCTL_SET_SESSION_MODE\n");
+		break;
+	}
+	case DISP_IOCTL_GET_SESSION_MODE:
+	{
+		printk("###############DISP_IOCTL_GET_SESSION_MODE\n");
+		break;
+	}
+	case DISP_IOCTL_SET_SESSION_TYPE:
+	{
+		printk("###############DISP_IOCTL_SET_SESSION_TYPE\n");
+		break;
+	}
+	case DISP_IOCTL_GET_SESSION_TYPE:
+	{
+		printk("###############DISP_IOCTL_GET_SESSION_TYPE\n");
+		break;
+	}
+	case DISP_IOCTL_WAIT_FOR_VSYNC:
+	{
+		printk("###############DISP_IOCTL_WAIT_FOR_VSYNC\n");
+		break;
+	}
+	case DISP_IOCTL_SET_MAX_LAYER_NUM:
+	{
+		printk("###############DISP_IOCTL_SET_MAX_LAYER_NUM\n");
+		break;
+	}
+	case DISP_IOCTL_WRITE_REG:
+	{
+		printk("###############DISP_IOCTL_WRITE_REG\n");
+		break;
+	}
+	case DISP_IOCTL_READ_REG:
+	{
+		printk("###############DISP_IOCTL_READ_REG\n");
+		break;
+	}
+	case DISP_IOCTL_DUMP_REG:
+	{
+		printk("###############DISP_IOCTL_DUMP_REG\n");
+		break;
+	}
+	case DISP_IOCTL_LOCK_THREAD:
+	{
+		printk("###############DISP_IOCTL_LOCK_THREAD\n");
+		break;
+	}
+	case DISP_IOCTL_UNLOCK_THREAD:
+	{
+		printk("###############DISP_IOCTL_UNLOCK_THREAD\n");
+		break;
+	}
+	case DISP_IOCTL_MARK_CMQ:
+	{
+		printk("###############DISP_IOCTL_MARK_CMQ\n");
+		break;
+	}
+	case DISP_IOCTL_WAIT_CMQ:
+	{
+		printk("###############DISP_IOCTL_WAIT_CMQ\n");
+		break;
+	}
+	case DISP_IOCTL_SYNC_REG:
+	{
+		printk("###############DISP_IOCTL_SYNC_REG\n");
+		break;
+	}
+	case DISP_IOCTL_LOCK_MUTEX:
+	{
+		printk("###############DISP_IOCTL_LOCK_MUTEX\n");
+		break;
+	}
+	case DISP_IOCTL_UNLOCK_MUTEX:
+	{
+		printk("###############DISP_IOCTL_UNLOCK_MUTEX\n");
+		break;
+	}
+	case DISP_IOCTL_LOCK_RESOURCE:
+	{
+		printk("###############DISP_IOCTL_LOCK_RESOURCE\n");
+		break;
+	}
+	case DISP_IOCTL_UNLOCK_RESOURCE:
+	{
+		printk("###############DISP_IOCTL_UNLOCK_RESOURCE\n");
+		break;
+	}
+	case DISP_IOCTL_SET_INTR:
+	{
+		printk("###############DISP_IOCTL_SET_INTR\n");
+		break;
+	}
+	case DISP_IOCTL_TEST_PATH:
+	{
+		printk("###############DISP_IOCTL_TEST_PATH\n");
+		break;
+	}
+	case DISP_IOCTL_CLOCK_ON:
+	{
+		printk("###############DISP_IOCTL_CLOCK_ON\n");
+		break;
+	}
+	case DISP_IOCTL_CLOCK_OFF:
+	{
+		printk("###############DISP_IOCTL_CLOCK_OFF\n");
+		break;
+	}
+	case DISP_IOCTL_RUN_DPF:
+	{
+		printk("###############DISP_IOCTL_RUN_DPF\n");
+		break;
+	}
+	case DISP_IOCTL_CHECK_OVL:
+	{
+		printk("###############DISP_IOCTL_CHECK_OVL\n");
+		break;
+	}
+	case DISP_IOCTL_GET_OVL:
+	{
+		printk("###############DISP_IOCTL_GET_OVL\n");
+		break;
+	}
+	case DISP_IOCTL_EXEC_COMMAND:
+	{
+		printk("###############DISP_IOCTL_EXEC_COMMAND\n");
+		break;
+	}
+	case DISP_IOCTL_RESOURCE_REQUIRE:
+	{
+		printk("###############DISP_IOCTL_RESOURCE_REQUIRE\n");
+		break;
+	}
+	case DISP_IOCTL_AAL_EVENTCTL:
+	{
+		printk("###############DISP_IOCTL_AAL_EVENTCTL\n");
+		break;
+	}
+	case DISP_IOCTL_AAL_GET_HIST:
+	{
+		printk("###############DISP_IOCTL_AAL_GET_HIST\n");
+		break;
+	}
+	case DISP_IOCTL_AAL_SET_PARAM:
+	{
+		printk("###############DISP_IOCTL_AAL_SET_PARAM\n");
+		break;
+	}
+	case DISP_IOCTL_AAL_INIT_REG:
+	{
+		printk("###############DISP_IOCTL_AAL_INIT_REG\n");
+		break;
+	}
+	case DISP_IOCTL_SET_GAMMALUT:
+	{
+		printk("###############DISP_IOCTL_SET_GAMMALUT\n");
+		break;
+	}
+	case DISP_IOCTL_SET_CCORR:
+	{
+		printk("###############DISP_IOCTL_SET_CCORR\n");
+		break;
+	}
+	case DISP_IOCTL_SET_CLKON:
+	{
+		printk("###############DISP_IOCTL_SET_CLKON\n");
+		break;
+	}
+	case DISP_IOCTL_SET_CLKOFF:
+	{
+		printk("###############DISP_IOCTL_SET_CLKOFF\n");
+		break;
+	}
+	case DISP_IOCTL_MUTEX_CONTROL:
+	{
+		printk("###############DISP_IOCTL_MUTEX_CONTROL\n");
+		break;
+	}
+	case DISP_IOCTL_GET_LCMINDEX:
+	{
+		printk("###############DISP_IOCTL_GET_LCMINDEX\n");
+		break;
+	}
+	case DISP_IOCTL_SET_PQPARAM:
+	{
+		printk("###############DISP_IOCTL_SET_PQPARAM\n");
+		break;
+	}
+	case DISP_IOCTL_GET_PQPARAM:
+	{
+		printk("###############DISP_IOCTL_GET_PQPARAM\n");
+		break;
+	}
+	case DISP_IOCTL_GET_PQINDEX:
+	{
+		printk("###############DISP_IOCTL_GET_PQINDEX\n");
+		break;
+	}
+	case DISP_IOCTL_SET_PQINDEX:
+	{
+		printk("###############DISP_IOCTL_SET_PQINDEX\n");
+		break;
+	}
+	case DISP_IOCTL_SET_TDSHPINDEX:
+	{
+		printk("###############DISP_IOCTL_SET_TDSHPINDEX\n");
+		break;
+	}
+	case DISP_IOCTL_GET_TDSHPINDEX:
+	{
+		printk("###############DISP_IOCTL_GET_TDSHPINDEX\n");
+		break;
+	}
+	case DISP_IOCTL_SET_PQ_CAM_PARAM:
+	{
+		printk("###############DISP_IOCTL_SET_PQ_CAM_PARAM\n");
+		break;
+	}
+	case DISP_IOCTL_GET_PQ_CAM_PARAM:
+	{
+		printk("###############DISP_IOCTL_GET_PQ_CAM_PARAM\n");
+		break;
+	}
+	case DISP_IOCTL_SET_PQ_GAL_PARAM:
+	{
+		printk("###############DISP_IOCTL_SET_PQ_GAL_PARAM\n");
+		break;
+	}
+	case DISP_IOCTL_GET_PQ_GAL_PARAM:
+	{
+		printk("###############DISP_IOCTL_GET_PQ_GAL_PARAM\n");
+		break;
+	}
+	case DISP_IOCTL_PQ_SET_BYPASS_COLOR:
+	{
+		printk("###############DISP_IOCTL_PQ_SET_BYPASS_COLOR\n");
+		break;
+	}
+	case DISP_IOCTL_PQ_SET_WINDOW:
+	{
+		printk("###############DISP_IOCTL_PQ_SET_WINDOW\n");
+		break;
+	}
+	case DISP_IOCTL_PQ_GET_TDSHP_FLAG:
+	{
+		printk("###############DISP_IOCTL_PQ_GET_TDSHP_FLAG\n");
+		break;
+	}
+	case DISP_IOCTL_PQ_SET_TDSHP_FLAG:
+	{
+		printk("###############DISP_IOCTL_PQ_SET_TDSHP_FLAG\n");
+		break;
+	}
+	case DISP_IOCTL_PQ_GET_DC_PARAM:
+	{
+		printk("###############DISP_IOCTL_PQ_GET_DC_PARAM\n");
+		break;
+	}
+	case DISP_IOCTL_PQ_SET_DC_PARAM:
+	{
+		printk("###############DISP_IOCTL_PQ_SET_DC_PARAM\n");
+		break;
+	}
+	case DISP_IOCTL_WRITE_SW_REG:
+	{
+		printk("###############DISP_IOCTL_WRITE_SW_REG\n");
+		break;
+	}
+	case DISP_IOCTL_READ_SW_REG:
+	{
+		printk("###############DISP_IOCTL_READ_SW_REG\n");
+		break;
+	}
+	case DISP_IOCTL_OD_CTL:
+	{
+		printk("###############DISP_IOCTL_OD_CTL\n");
+		break;
+	}
+	case DISP_IOCTL_OVL_ENABLE_CASCADE:
+	{
+		printk("###############DISP_IOCTL_OVL_ENABLE_CASCADE\n");
+		break;
+	}
+	case DISP_IOCTL_OVL_DISABLE_CASCADE:
+	{
+		printk("###############DISP_IOCTL_OVL_DISABLE_CASCADE\n");
+		break;
+	}
+	case DISP_IOCTL_SET_TPLAY_HANDLE:
+	{
+		printk("###############DISP_IOCTL_SET_TPLAY_HANDLE\n");
+		break;
+	}
+	default:
+		printk("default micro:%x \n", cmd);break;
+	}
+}

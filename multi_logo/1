@@ -1,0 +1,2 @@
+	$(MULTI_GEN) $(MULTI_BOOT_LOGO_LIST)
+	cp $(BOOT_LOGO_DIR)/logo.bin $(LOGO_IMAGE)

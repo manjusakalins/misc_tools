@@ -1,0 +1,1272 @@
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): socket_handler: args from hal: 3
+D/MNLD    (  362): start_mnl_process
+D/MNLD    (  362): start_mnl_process: GPS driver is stopped, gps_cnt++ = 1
+D/MNLD    (  362): start_mnl_process: before lanuch daemon, mnld_monitor.terminated = 1
+D/MNLD    (  362): mnl_write_attr: write '2' to /sys/class/gpsdrv/gps/pwrctl okay
+D/mnl_linux(  362): read_prop: read_prop: open /data/misc/mnl.prop fail!
+D/mnl_linux(  362): read_prop: read_prop: open /sbin/mnl.prop fail!
+E/mnl_linux(  362): mnl_utl_load_property: Config is not set yet, ignore
+D/mnl_linux(  362): mnl_utl_load_property: ========================================
+D/mnl_linux(  362): mnl_utl_load_property: [setting] load default value
+D/mnl_linux(  362): mnl_utl_load_property: dev_dsp/dev_gps : /dev/stpgps /dev/gps
+D/mnl_linux(  362): mnl_utl_load_property: init_speed/link_speed: 38400 921600
+D/mnl_linux(  362): mnl_utl_load_property: pmtk_conn/socket_port/dev_dbg : 1 7000 /dev/ttygserial
+D/mnl_linux(  362): mnl_utl_load_property: debug_nmea/debug_mnl: 1 0x0001
+D/mnl_linux(  362): mnl_utl_load_property: nmea2file/dbg2file: 0/0
+D/mnl_linux(  362): mnl_utl_load_property: time-out: 0 0 0 0 0 0
+D/mnl_linux(  362): mnl_utl_load_property: EPO_Enabled: 1
+D/mnl_linux(  362): mnl_utl_load_property: BEE_Enabled: 1
+D/mnl_linux(  362): mnl_utl_load_property: SUPL_Enabled: 1
+D/mnl_linux(  362): mnl_utl_load_property: SUPLSI_Enabled: 1
+D/mnl_linux(  362): mnl_utl_load_property: EPO_priority: 64
+D/mnl_linux(  362): mnl_utl_load_property: BEE_priority: 32
+D/mnl_linux(  362): mnl_utl_load_property: SUPL_priority: 96
+D/mnl_linux(  362): mnl_utl_load_property: AVAILIABLE_AGE: 2
+D/mnl_linux(  362): mnl_utl_load_property: RTC_DRIFT: 30
+D/mnl_linux(  362): mnl_utl_load_property: TIME_INTERVAL: 10
+D/mnl_linux(  362): mnl_utl_load_property: ========================================
+D/MNLD    (  362): launch_daemon_thread: chip_id is 0x0335
+E/MNLD    (  362): launch_daemon_thread: Before main policy = 0, priority = 0
+E/MNLD    (  362): launch_daemon_thread: pthread_setschedparam FAIL 
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837058, 15)
+D/mnl_linux(  362): mtk_gps_sys_init: Start to read nvram
+D/mnl_linux(  362): mtk_gps_sys_init: nvram_init_val Ready
+D/mnl_linux(  362): mtk_gps_sys_init: Get nvram restore ready retry cc=1
+D/mnl_linux(  362): mtk_gps_sys_init: GPS NVRam (52 * 1) : 
+D/mnl_linux(  362): mtk_gps_sys_init: dsp_dev(/dev/stpgps) : /dev/stpgps
+D/mnl_linux(  362): mtk_gps_sys_init: gps_tcxo_hz : 26000000
+D/mnl_linux(  362): mtk_gps_sys_init: gps_tcxo_ppb : 500
+D/mnl_linux(  362): mtk_gps_sys_init: gps_tcxo_type : 255
+D/mnl_linux(  362): mtk_gps_sys_init: gps_lna_mode : 0
+D/MNLD    (  362): launch_daemon_thread: mtk_gps_sys_init() success
+D/MNLD    (  362): launch_daemon_thread: linux_gps_dev_init() success
+D/MNLD    (  362): linux_gps_init: open dsp successfully
+D/MNLD    (  362): linux_gps_init: TCXO, buffer 2
+D/MNLD    (  362): linux_gps_init: need do nothing for RTC
+D/MNLD    (  362): linux_gps_init: Get chip version type (0xfffe6735) 
+D/MNLD    (  362): linux_gps_init: Get chip version value (176) 
+D/MNLD    (  362): linux_gps_init: ACCURACY_SNR = 1
+D/MNLD    (  362): linux_gps_init: mtk_gps_version_mode = 1
+D/MNLD    (  362): linux_gps_init: GNSSOPMode: 2
+D/MNLD    (  362): linux_gps_init: zqh: mnl_config.BEE_enabled, 1
+D/MNLD    (  362): linux_gps_init: we use Spirent to test
+D/MNLD    (  362): linux_gps_init: u4Bitmap, 0
+D/MNLD    (  362): linux_gps_init: init_cfg.C0 = 0
+D/MNLD    (  362): linux_gps_init: init_cfg.C1 = 0
+D/MNLD    (  362): linux_gps_init: init_cfg.initU = 0
+D/MNLD    (  362): linux_gps_init: init_cfg.lastU = 0
+D/MNLD    (  362): linux_gps_init: Status (18) 
+D/MNLD    (  362): linux_gps_init: EPO file does not exist, no EPO yet
+D/MNLD    (  362): linux_gps_init: dsp port (/dev/stpgps) 
+D/MNLD    (  362): linux_gps_init: nmea port (/dev/gps) 
+D/MNLD    (  362): linux_gps_init: nmea dbg port (/dev/ttygserial) 
+D/MNLD    (  362): linux_gps_init: dbg_file_name (/mnt/sdcard/mtklog/gpsdbglog/gpsdebug.log) 
+D/MNLD    (  362): linux_gps_init: DebugType (0) 
+D/MNLD    (  362): linux_gps_init: nv_file_name (/data/misc/mtkgps.dat) 
+D/MNLD    (  362): get_prop: Config is not set yet, use default value
+D/MNLD    (  362): linux_gps_init: EPO_enabled (1) 
+D/MNLD    (  362): gps_raw_data_enable: gps_raw_data_enable: open /data/misc/gps.conf fail!
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: [GPSDBG],INF,thread file_control create: F7197000
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread_dsp_input_func
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: BEE event create ok
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app:  Debug thread created
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread mnl create : F7092000
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app:  Agent tread created
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: listening debug port: 7000,0
+D/MNLD    (  362): linux_gps_init: 0 st send profile to agent OK 
+D/MNLD    (  362): launch_daemon_thread: linux_gps_init() success
+D/MNLD    (  362): launch_daemon_thread: linux_setup_signal_handler() success
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app:  Agent init OK 
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app:  Agent epo init OK 
+D/MNLD    (  362): launch_daemon_thread: MNL running..
+D/MNLD    (  362): start_mnl_process: after launch daemon, set mnld_monitor.terminated = 0
+D/MNLD    (  362): mnl_write_attr: write '2' to /sys/class/gpsdrv/gps/state okay
+D/MNLD    (  362): get_prop: Config is not set yet, use default value
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: BEE init ok
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: agps state mode = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $PMTK010,001*2E
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001022.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4B
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001022.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*48
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: agps state mode = 2
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: MNL ready and assist req:1
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: Agent assist request
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: user is 1
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: APP open GPS driver
+D/agps    (  362): [MNL2AGPS] mnl2agps_gps_open
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: agps state mode = 2
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: MNL NTP/NLP request:2
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: Call nlp_server request
+D/MNLD    (  362): mnl2nlp_request_nlp: [nlp] request_nlp
+D/MNLD    (  362): mnl2nlp_send_cmd3_and_quit: [nlp] socket_fd: 20
+D/MNLD    (  362): write_cmd3: [nlp] cmd(101) ok
+D/MNLD    (  362): write_cmd3: [nlp] cmd(100) ok
+D/MNLD    (  362): close_fd: [nlp] close fd 20 ok
+D/agps    (  357): [agps][n][AGPS] [MNL] read  pmtk=[$PMTK764,0,0,0,1,0,128*3D
+D/agps    (  357): [agps] WARNING: [AGPS] [MNL] read  gps_open  assist_req=1  version=[4.37.0]
+D/agps    (  357): [agps][n][AGPS] [MNL] write  set_id_req  flags=0x1
+D/MNLD    (  362): process: socket_handler: ret = 0
+D/MNLD    (  362): process: epoll_wait() received 2 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): process: mnl2agps_handler: ret = 0
+D/MNLD    (  362): set_id_req: set_id_req
+D/MNLD    (  362): mnld_sendto_hal: mnld2hal fd: 10
+E/MNLD    (  362): main: process data error: 2 (No such file or directory)
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3203WARNING: mnld_to_gps_handler  ret=1024 type=233
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): socket_handler: args from hal: 131
+D/agps    (  362): [MNL2AGPS] type=0, setid = 
+D/MNLD    (  362): process: socket_handler: ret = 0
+D/agps    (  357): [agps][n][AGPS] [MNL] read  set_set_id  type=0 setid=[]
+D/agps    (  357): [agps][n][AGPS] [MNL] write  ref_loc_req  flags=0x1
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): process: mnl2agps_handler: ret = 0
+D/MNLD    (  362): ref_loc_req: ref_loc_req
+D/MNLD    (  362): mnld_sendto_hal: mnld2hal fd: 10
+E/MNLD    (  362): main: process data error: 2 (No such file or directory)
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3203WARNING: mnld_to_gps_handler  ret=1024 type=234
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001023.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4A
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001023.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*49
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/agps    (  357): [agps][n][Profiling] i=0 type=0 temstamp=1262304606738 msg=[MNL sends the SI_REQ]
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001024.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4D
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001024.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4E
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001025.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4C
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001025.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4F
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001026.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4F
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001026.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4C
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001027.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4E
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001027.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4D
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001028.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*41
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001028.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*42
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001029.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*40
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001029.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*43
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001030.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*48
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001030.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4B
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001031.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*49
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001031.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4A
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001032.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4A
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001032.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*49
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): socket_handler: args from hal: 2
+D/MNLD    (  362): socket_handler: Reveive MNL_CMD_STOP from HAL
+D/MNLD    (  362): get_prop: Config is not set yet, use default value
+D/MNLD    (  362): stop_mnl_process
+D/MNLD    (  362): stop_mnl_process: GPS driver needs stop now, gps_cnt: 0
+D/MNLD    (  362): mtk_gps_exit_proc: MNL exiting 
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,0,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (0)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread dsp input exit
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (0)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread,0,Exit,OK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,1,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (1)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: accept error: 4 (Interrupted system call)
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (1)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread,1,Exit,OK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,2,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (2)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: BEE thread return
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (2)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread,2,Exit,OK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,3,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (3)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread mnl exit
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (3)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread,3,Exit,OK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,4,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (4)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread agent get msg failed:1
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread agent event delete ok
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread agent return
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (4)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread,4,Exit,OK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,5,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (5)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: [GPSDBG],INF,wait event ok
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app:  [mtk_gps_set_debug_type] debug_type:0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: [GPSDBG],ERR,[GpsLogDirCheck] Access gps debug log dir fail(No such file or directory)!
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: [GPSDBG],INF,file control event delete ok
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (5)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread,5,Exit,OK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Uninit GPS DSP Uart
+D/MNLD    (  362): mtk_gps_exit_proc: mtk_gps_mnl_stop()
+D/MNLD    (  362): linux_gps_uninit: close dsp_fd 
+D/MNLD    (  362): mtk_gps_exit_proc: callback_flags = 0 --
+D/MNLD    (  362): mtk_gps_exit_proc: MNL exiting down,  = 0
+D/MNLD    (  362): stop_mnl_process: mtk_gps_exit_proc success
+D/MNLD    (  362): stop_mnl_process: Cancel alarm
+D/MNLD    (  362): mnl_write_attr: write '0' to /sys/class/gpsdrv/gps/pwrctl okay
+D/MNLD    (  362): mnl_write_attr: write '0' to /sys/class/gpsdrv/gps/state okay
+D/MNLD    (  362): mnld_sendto_hal: mnld2hal fd: 10
+D/MNLD    (  362): stop_mnl_process: Send to HAL successfully
+D/agps    (  362): [MNL2AGPS] mnl2agps_gps_close
+D/MNLD    (  362): process: socket_handler: ret = 0
+D/agps    (  357): [agps] WARNING: [AGPS] [MNL] read  gps_close
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3203WARNING: mnld_to_gps_handler  ret=1024 type=65
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3414MNLD died!!
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3419sta.status = GPS_STATUS_SESSION_END
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3421sta.status = GPS_STATUS_ENGINE_OFF
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3426s->start_flag = 0
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3427HAL_CMD_MNL_DIE has been receiving from MNLD, release lock let stop done
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): socket_handler: args from hal: 3
+D/MNLD    (  362): start_mnl_process
+D/MNLD    (  362): start_mnl_process: GPS driver is stopped, gps_cnt++ = 1
+D/MNLD    (  362): start_mnl_process: before lanuch daemon, mnld_monitor.terminated = 1
+D/MNLD    (  362): mnl_write_attr: write '2' to /sys/class/gpsdrv/gps/pwrctl okay
+D/mnl_linux(  362): read_prop: read_prop: open /data/misc/mnl.prop fail!
+D/mnl_linux(  362): read_prop: read_prop: open /sbin/mnl.prop fail!
+E/mnl_linux(  362): mnl_utl_load_property: Config is not set yet, ignore
+D/mnl_linux(  362): mnl_utl_load_property: ========================================
+D/mnl_linux(  362): mnl_utl_load_property: [setting] load default value
+D/mnl_linux(  362): mnl_utl_load_property: dev_dsp/dev_gps : /dev/stpgps /dev/gps
+D/mnl_linux(  362): mnl_utl_load_property: init_speed/link_speed: 38400 921600
+D/mnl_linux(  362): mnl_utl_load_property: pmtk_conn/socket_port/dev_dbg : 1 7000 /dev/ttygserial
+D/mnl_linux(  362): mnl_utl_load_property: debug_nmea/debug_mnl: 1 0x0001
+D/mnl_linux(  362): mnl_utl_load_property: nmea2file/dbg2file: 0/0
+D/mnl_linux(  362): mnl_utl_load_property: time-out: 0 0 0 0 0 0
+D/mnl_linux(  362): mnl_utl_load_property: EPO_Enabled: 1
+D/mnl_linux(  362): mnl_utl_load_property: BEE_Enabled: 1
+D/mnl_linux(  362): mnl_utl_load_property: SUPL_Enabled: 1
+D/mnl_linux(  362): mnl_utl_load_property: SUPLSI_Enabled: 1
+D/mnl_linux(  362): mnl_utl_load_property: EPO_priority: 64
+D/mnl_linux(  362): mnl_utl_load_property: BEE_priority: 32
+D/mnl_linux(  362): mnl_utl_load_property: SUPL_priority: 96
+D/mnl_linux(  362): mnl_utl_load_property: AVAILIABLE_AGE: 2
+D/mnl_linux(  362): mnl_utl_load_property: RTC_DRIFT: 30
+D/mnl_linux(  362): mnl_utl_load_property: TIME_INTERVAL: 10
+D/mnl_linux(  362): mnl_utl_load_property: ========================================
+D/MNLD    (  362): launch_daemon_thread: chip_id is 0x0335
+E/MNLD    (  362): launch_daemon_thread: Before main policy = 0, priority = 0
+E/MNLD    (  362): launch_daemon_thread: pthread_setschedparam FAIL 
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837058, 15)
+D/mnl_linux(  362): mtk_gps_sys_init: Start to read nvram
+D/mnl_linux(  362): mtk_gps_sys_init: nvram_init_val Ready
+D/mnl_linux(  362): mtk_gps_sys_init: Get nvram restore ready retry cc=1
+D/mnl_linux(  362): mtk_gps_sys_init: GPS NVRam (52 * 1) : 
+D/mnl_linux(  362): mtk_gps_sys_init: dsp_dev(/dev/stpgps) : /dev/stpgps
+D/mnl_linux(  362): mtk_gps_sys_init: gps_tcxo_hz : 26000000
+D/mnl_linux(  362): mtk_gps_sys_init: gps_tcxo_ppb : 500
+D/mnl_linux(  362): mtk_gps_sys_init: gps_tcxo_type : 255
+D/mnl_linux(  362): mtk_gps_sys_init: gps_lna_mode : 0
+D/MNLD    (  362): launch_daemon_thread: mtk_gps_sys_init() success
+D/MNLD    (  362): launch_daemon_thread: linux_gps_dev_init() success
+D/MNLD    (  362): linux_gps_init: open dsp successfully
+D/MNLD    (  362): linux_gps_init: TCXO, buffer 2
+D/MNLD    (  362): linux_gps_init: need do nothing for RTC
+D/MNLD    (  362): linux_gps_init: Get chip version type (0xfffe6735) 
+D/MNLD    (  362): linux_gps_init: Get chip version value (176) 
+D/MNLD    (  362): linux_gps_init: ACCURACY_SNR = 1
+D/MNLD    (  362): linux_gps_init: mtk_gps_version_mode = 1
+D/MNLD    (  362): linux_gps_init: GNSSOPMode: 2
+D/MNLD    (  362): linux_gps_init: zqh: mnl_config.BEE_enabled, 1
+D/MNLD    (  362): linux_gps_init: we use Spirent to test
+D/MNLD    (  362): linux_gps_init: u4Bitmap, 0
+D/MNLD    (  362): linux_gps_init: init_cfg.C0 = 0
+D/MNLD    (  362): linux_gps_init: init_cfg.C1 = 0
+D/MNLD    (  362): linux_gps_init: init_cfg.initU = 0
+D/MNLD    (  362): linux_gps_init: init_cfg.lastU = 0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread_dsp_input_func
+D/MNLD    (  362): linux_gps_init: Status (18) 
+D/MNLD    (  362): linux_gps_init: EPO file does not exist, no EPO yet
+D/MNLD    (  362): linux_gps_init: dsp port (/dev/stpgps) 
+D/MNLD    (  362): linux_gps_init: nmea port (/dev/gps) 
+D/MNLD    (  362): linux_gps_init: nmea dbg port (/dev/ttygserial) 
+D/MNLD    (  362): linux_gps_init: dbg_file_name (/mnt/sdcard/mtklog/gpsdbglog/gpsdebug.log) 
+D/MNLD    (  362): linux_gps_init: DebugType (0) 
+D/MNLD    (  362): linux_gps_init: nv_file_name (/data/misc/mtkgps.dat) 
+D/MNLD    (  362): get_prop: Config is not set yet, use default value
+D/MNLD    (  362): linux_gps_init: EPO_enabled (1) 
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app:  Debug thread created
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: listening debug port: 7000,0
+D/MNLD    (  362): gps_raw_data_enable: gps_raw_data_enable: open /data/misc/gps.conf fail!
+D/MNLD    (  362): linux_gps_init: 0 st send profile to agent OK 
+D/MNLD    (  362): launch_daemon_thread: linux_gps_init() success
+D/MNLD    (  362): launch_daemon_thread: linux_setup_signal_handler() success
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: BEE event create ok
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app:  Agent tread created
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app:  Agent init OK 
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app:  Agent epo init OK 
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread mnl create : F7096000
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: [GPSDBG],INF,thread file_control create: F7197000
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: BEE init ok
+D/MNLD    (  362): launch_daemon_thread: MNL running..
+D/MNLD    (  362): start_mnl_process: after launch daemon, set mnld_monitor.terminated = 0
+D/MNLD    (  362): mnl_write_attr: write '2' to /sys/class/gpsdrv/gps/state okay
+D/MNLD    (  362): get_prop: Config is not set yet, use default value
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: agps state mode = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $PMTK010,001*2E
+D/agps    (  357): [agps][n][AGPS] [MNL] read  pmtk=[$PMTK764,0,0,0,1,0,128*3D
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001133.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4A
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001133.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*49
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: agps state mode = 2
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: MNL ready and assist req:1
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: Agent assist request
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: user is 1
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: APP open GPS driver
+D/agps    (  362): [MNL2AGPS] mnl2agps_gps_open
+D/agps    (  357): [agps] WARNING: [AGPS] [MNL] read  gps_open  assist_req=1  version=[4.37.0]
+D/agps    (  357): [agps][n][AGPS] [MNL] write  set_id_req  flags=0x1
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: agps state mode = 2
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: MNL NTP/NLP request:2
+D/MNLD    (  362): mtk_gps_sys_agps_disaptcher_callback: Call nlp_server request
+D/MNLD    (  362): mnl2nlp_request_nlp: [nlp] request_nlp
+D/MNLD    (  362): mnl2nlp_send_cmd3_and_quit: [nlp] socket_fd: 18
+D/MNLD    (  362): write_cmd3: [nlp] cmd(101) ok
+D/MNLD    (  362): write_cmd3: [nlp] cmd(100) ok
+D/MNLD    (  362): close_fd: [nlp] close fd 18 ok
+D/MNLD    (  362): process: socket_handler: ret = 0
+D/MNLD    (  362): process: epoll_wait() received 2 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): process: mnl2agps_handler: ret = 0
+D/MNLD    (  362): set_id_req: set_id_req
+D/MNLD    (  362): mnld_sendto_hal: mnld2hal fd: 10
+E/MNLD    (  362): main: process data error: 2 (No such file or directory)
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3203WARNING: mnld_to_gps_handler  ret=1024 type=233
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): socket_handler: args from hal: 131
+D/agps    (  362): [MNL2AGPS] type=0, setid = 
+D/MNLD    (  362): process: socket_handler: ret = 0
+D/agps    (  357): [agps][n][AGPS] [MNL] read  set_set_id  type=0 setid=[]
+D/agps    (  357): [agps][n][AGPS] [MNL] write  ref_loc_req  flags=0x1
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): process: mnl2agps_handler: ret = 0
+D/MNLD    (  362): ref_loc_req: ref_loc_req
+D/MNLD    (  362): mnld_sendto_hal: mnld2hal fd: 10
+E/MNLD    (  362): main: process data error: 2 (No such file or directory)
+D/gps_mtk (  799): mnld_to_gps_handler: line = 3203WARNING: mnld_to_gps_handler  ret=1024 type=234
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001134.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4D
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001134.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4E
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/agps    (  357): [agps][n][Profiling] i=0 type=0 temstamp=1262304677493 msg=[MNL sends the SI_REQ]
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001135.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4C
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001135.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4F
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001136.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4F
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001136.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4C
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001137.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4E
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001137.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4D
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001138.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*41
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001138.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*42
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001139.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*40
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001139.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*43
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001140.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4E
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001140.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4D
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001141.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4F
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001141.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4C
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001142.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4C
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001142.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4F
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001143.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4D
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001143.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4E
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001144.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4A
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001144.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*49
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001145.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4B
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001145.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*48
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001146.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*48
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001146.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4B
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001147.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*49
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001147.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4A
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001148.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*46
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001148.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*45
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001149.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*47
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001149.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*44
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001150.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4F
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001150.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4C
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001151.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4E
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001151.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4D
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001152.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4D
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001152.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4E
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001153.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4C
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001153.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4F
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001154.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4B
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001154.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*48
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001155.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4A
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001155.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*49
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001156.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*49
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001156.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4A
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001157.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*48
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001157.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4B
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001158.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*47
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001158.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*44
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001159.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*46
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001159.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*45
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001200.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*49
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001200.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4A
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001201.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*48
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001201.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4B
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001202.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4B
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001202.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*48
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001203.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4A
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001203.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*49
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001204.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4D
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001204.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4E
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001205.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4C
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001205.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4F
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001206.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4F
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001206.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4C
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001207.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4E
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001207.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4D
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001208.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*41
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001208.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*42
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001209.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*40
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001209.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*43
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001210.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*48
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001210.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4B
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001211.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*49
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001211.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4A
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001212.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4A
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001212.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*49
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001213.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4B
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001213.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*48
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001214.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4C
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001214.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4F
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001215.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4D
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001215.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4E
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001216.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4E
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001216.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4D
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001217.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4F
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001217.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4C
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001218.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*40
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001218.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*43
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001219.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*41
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001219.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*42
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001220.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4B
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001220.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*48
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001221.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4A
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001221.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*49
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001222.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*49
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001222.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4A
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001223.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*48
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001223.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4B
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001224.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4F
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001224.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4C
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001225.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4E
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001225.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4D
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001226.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4D
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001226.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4E
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001227.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4C
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001227.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4F
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001228.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*43
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001228.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*40
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001229.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*42
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001229.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*41
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001230.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4A
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001230.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*49
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001231.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*4B
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001231.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*48
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: $GPGGA,001232.009,8960.0000,N,00000.0000,E,0,0,,137.0,M,13.0,M,,*48
+D/mnl_linux(  362): $GPGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*30
+D/mnl_linux(  362): $GPGSV,1,1,0*49
+D/mnl_linux(  362): $GPRMC,001232.009,V,8960.0000,N,00000.0000,E,0.000,0.00,010110,,,N*4B
+D/mnl_linux(  362): $GPVTG,0.00,T,,M,0.000,N,0.000,K,N*32
+D/mnl_linux(  362): $GPACCURACY,3162.1*3F
+D/MNLD    (  362): send_cmd_ex: slf_send_cmd (13, 0x30)
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): sigrcv_handler: args from mnld: 48
+D/MNLD    (  362): mnl_set_alarm: (0, 0xF6837088, 5)
+D/MNLD    (  362): process: sigrc_handler: ret = 0
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: MTK_GPS_MSG_FIX_READY,GET_RTC_FAIL
+D/MNLD    (  362): mtk_gps_sys_gps_mnl_callback: gps_measurement_state = 255 ,state = 2
+D/MNLD    (  362): process: epoll_wait() received 1 events
+D/MNLD    (  362): socket_handler: args from hal: 2
+D/MNLD    (  362): socket_handler: Reveive MNL_CMD_STOP from HAL
+D/MNLD    (  362): get_prop: Config is not set yet, use default value
+D/MNLD    (  362): stop_mnl_process
+D/MNLD    (  362): stop_mnl_process: GPS driver needs stop now, gps_cnt: 0
+D/MNLD    (  362): mtk_gps_exit_proc: MNL exiting 
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,0,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (0)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread dsp input exit
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (0)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread,0,Exit,OK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,1,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (1)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: accept error: 4 (Interrupted system call)
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (1)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread,1,Exit,OK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,2,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (2)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: BEE thread return
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (2)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread,2,Exit,OK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread Handler,3,0xf7311a35
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (3)ThreadKill
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Thread is ret,0
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: thread mnl exit
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: (3)ThreadLeaveOK
+D/mnl_linux(  362): mtk_gps_sys_nmea_output_to_app: Threa

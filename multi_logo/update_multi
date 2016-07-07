@@ -1,0 +1,89 @@
+#!/bin/bash
+####!!!!!!!!! ensure the inputed resolution is sort form big to small!!!!!!!!!!!########
+if [ "$1" = "" ]; then
+	echo "Please input resolution,"
+	echo "Such as: qvga, wqvga, wvga, hvga"
+	exit
+fi
+pwd
+touch ./lltest
+
+curpath=`dirname $0`
+echo $curpath
+traw=""$curpath"/tool/bmp_to_raw"
+tmkimg=""$curpath"/tool/mkimage"
+tzpipe=""$curpath"/tool/zpipe"
+echo $traw
+
+nums=0
+argv="$@"
+for argg in "$@"; do
+    size=$argg
+    p=$curpath"/"$size
+    echo $p
+    list="
+    $p/"${size}_uboot".bmp
+    $p/"${size}_battery".bmp
+    $p/"${size}_low_battery".bmp
+    $p/"${size}_charger_ov".bmp
+    $p/"${size}_num_0".bmp
+    $p/"${size}_num_1".bmp
+    $p/"${size}_num_2".bmp
+    $p/"${size}_num_3".bmp
+    $p/"${size}_num_4".bmp
+    $p/"${size}_num_5".bmp
+    $p/"${size}_num_6".bmp
+    $p/"${size}_num_7".bmp
+    $p/"${size}_num_8".bmp
+    $p/"${size}_num_9".bmp
+    $p/"${size}_num_percent".bmp
+    $p/"${size}_bat_animation_01".bmp
+    $p/"${size}_bat_animation_02".bmp
+    $p/"${size}_bat_animation_03".bmp
+    $p/"${size}_bat_animation_04".bmp
+    $p/"${size}_bat_animation_05".bmp
+    $p/"${size}_bat_animation_06".bmp
+    $p/"${size}_bat_animation_07".bmp
+    $p/"${size}_bat_animation_08".bmp
+    $p/"${size}_bat_animation_09".bmp
+    $p/"${size}_bat_animation_10".bmp
+    $p/"${size}_bat_10_01".bmp
+    $p/"${size}_bat_10_02".bmp
+    $p/"${size}_bat_10_03".bmp
+    $p/"${size}_bat_10_04".bmp
+    $p/"${size}_bat_10_05".bmp
+    $p/"${size}_bat_10_06".bmp
+    $p/"${size}_bat_10_07".bmp
+    $p/"${size}_bat_10_08".bmp
+    $p/"${size}_bat_10_09".bmp
+    $p/"${size}_bat_10_10".bmp
+    $p/"${size}_bat_bg".bmp
+    $p/"${size}_bat_img".bmp
+    $p/"${size}_bat_100".bmp"
+
+    for one_bmp in $list;do
+	    $traw ./temp$nums.raw $one_bmp
+	    files_list+=" ./temp$nums.raw"
+	    let nums+=1
+    done
+
+    echo $nums
+
+
+    if [ $# == "1" ]; then
+	    echo "create 	boot_logo"
+	    $traw $p/boot_logo_${size} $p/"${size}_kernel".bmp	
+    else
+	    echo "create 	boot_logo_${size}"
+	    $traw $p/boot_logo_${size} $p/"${size}_kernel".bmp
+    fi
+
+done
+
+
+#echo $files_list
+$tzpipe -l 9 ./all.raw  $files_list
+$tmkimg ./all.raw LOGO > $curpath/logo.bin
+rm -rf $files_list
+rm -rf ./all.raw
+echo "conversion finished"
