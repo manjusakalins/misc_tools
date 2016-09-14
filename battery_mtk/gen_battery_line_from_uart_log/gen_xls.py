@@ -17,12 +17,25 @@ time_count_name=[];
 time_count_valset=[];
 
 inputlog=sys.argv[1];
-cmd = '''cat %s | grep AvgVbat | awk -F '.' '{print $1}' | awk -F '[' '{print $2}' | tee pylog_time ''' % inputlog
+
+#for mtk
+##cmd = '''cat %s | grep AvgVbat | awk -F '.' '{print $1}' | awk -F '[' '{print $2}' | tee pylog_time ''' % inputlog
+##list_time = os.popen(cmd).readlines()
+
+##using d5
+##cmd = '''cat %s | grep AvgVbat | awk -F ',SOC=' '{print $2}' | awk -F '(' '{print $2}' | awk -F ')' '{print $1}'  | tee pylog_soc ''' % inputlog
+
+#using d2
+#cmd = '''cat %s | grep oam_result_inf | awk -F ',' '{print $2}' ''' % inputlog
+
+##list_soc=os.popen(cmd).readlines()
+
+
+# for sprd
+cmd = '''cat %s | grep ,cap: | awk -F '.' '{print $1}' | awk -F '[' '{print $2}' | tee pylog_time ''' % inputlog
 list_time = os.popen(cmd).readlines()
-#print list_file
-#os.popen(cmd).readlines()
-#using d5
-cmd = '''cat %s | grep AvgVbat | awk -F ',SOC=' '{print $2}' | awk -F '(' '{print $2}' | awk -F ')' '{print $1}'  | tee pylog_soc ''' % inputlog
+
+cmd = '''cat %s | grep ,cap: | awk -F ',cap:' '{print $2}' | awk -F ',' '{print $1}' | tee pylog_soc ''' % inputlog
 #using d2
 #cmd = '''cat %s | grep oam_result_inf | awk -F ',' '{print $2}' ''' % inputlog
 list_soc=os.popen(cmd).readlines()
