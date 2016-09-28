@@ -99,11 +99,90 @@ for i in range(0, len(list_soc)):
         if cur_soc > 4400:
             cur_soc = 4250;
     else:
-        cur_soc=0
+        cur_soc=3200
 
     if cur_time.isdigit():
-        tmpval=((int(cur_time)-base_time)/10,cur_soc)
+        tmpval=((int(cur_time)-base_time)/10,cur_soc-3200)
         time_soc_dataset.append(tmpval);
+print time_soc_dataset
+
+
+##start to gen ocv table?
+same_r = 105;
+same_i = 700;
+total_time = time_soc_dataset[len(time_soc_dataset)-1][0]
+cap_diff = 90;
+ocv_max=4082
+ocv_min=3530
+
+per_unit = total_time/cap_diff+2;
+cnt=0;
+for vals in time_soc_dataset:
+    if vals[0] > cnt*per_unit:
+        print "%d, %d  %d" % (cnt+10, vals[1]+3200 + same_r*same_i/1000, vals[1]+3200)
+        cnt=cnt+1;
+
+cnt=0;
+for vals in time_soc_dataset:
+    if vals[0] > cnt*per_unit:
+        if cnt%2==0:
+            print "{%d, %d}," % (cnt+10, vals[1]+3200 + same_r*same_i/1000)
+        cnt=cnt+1;
+##################################################
+'''
+	{0   , 4179},         
+	{2   , 4155},         
+	{4   , 4136},         
+	{6   , 4118},         
+	{8   , 4098},         
+	{10  , 4082},         
+	{12  , 4065},         
+	{14  , 4048},         
+	{16  , 4029},         
+	{18  , 4014},         
+	{20  , 4000},         
+	{22  , 3986},         
+	{24  , 3973},         
+	{26  , 3959},         
+	{28  , 3946},         
+	{30  , 3936},         
+	{32  , 3924},         
+	{34  , 3914},         
+	{36  , 3901},         
+	{38  , 3889},         
+	{40  , 3867},         
+	{42  , 3850},         
+	{44  , 3837},         
+	{46  , 3827},         
+	{48  , 3819},         
+	{50  , 3812},         
+	{52  , 3806},         
+	{54  , 3800},         
+	{56  , 3796},         
+	{58  , 3791},         
+	{60  , 3788},         
+	{62  , 3781},         
+	{64  , 3778},         
+	{66  , 3777},         
+	{68  , 3774},         
+	{70  , 3771},         
+	{72  , 3769},         
+	{74  , 3762},         
+	{76  , 3755},         
+	{78  , 3746},         
+	{80  , 3739},         
+	{82  , 3730},         
+	{84  , 3718},         
+	{86  , 3704},         
+	{88  , 3688},         
+	{90  , 3681},         
+	{92  , 3677},         
+	{94  , 3670},         
+	{96  , 3644},         
+	{98  , 3562},         
+	{100 , 3408},         
+	{100 , 3349}, 
+'''
 
 #for bar
 bar_sort_item={};
@@ -121,8 +200,8 @@ for k,v in zip(bar_sort_item.iterkeys(),bar_sort_item.itervalues()):
 # gen png
 def scatterplotChart(output):
     global time_soc_dataset
-    #surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 1920, 1080)
-    surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 6920, 4080)
+    surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 1920, 1080)
+    #surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, 6920, 4080)
 
     top = 2
     dataSet = (

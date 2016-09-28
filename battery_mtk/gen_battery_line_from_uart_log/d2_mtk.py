@@ -17,7 +17,7 @@ time_count_name=[];
 time_count_valset=[];
 
 inputlog=sys.argv[1];
-use_d2=0;
+use_d2=1;
 
 #for mtk
 #using d5
@@ -210,6 +210,6 @@ def barChart(output, chartFactory):
 
     surface.write_to_png(output)
 
-scatterplotChart('discharge_curve.png');
-barChart('discharge_bar.png', pycha.bar.VerticalBarChart)
+scatterplotChart('discharge_curve_d2.png');
+barChart('discharge_bar_d2.png', pycha.bar.VerticalBarChart)
 
