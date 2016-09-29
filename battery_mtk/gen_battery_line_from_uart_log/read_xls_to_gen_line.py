@@ -126,4 +126,4 @@ def read_xls_to_gen_ocv_table_same_r(in_f, sheet_name, time_col, vol_col, row_s,
     
 #read_xls_to_gen_ocv_table_same_r("/home/manjusaka/work_data/I960/battery/i109_battery_4000/i109.xlsx", "Record", 3, 5, 1140, 2730, 75, 2000,1);
 #read_xls_to_gen_ocv_table_same_r("/home/manjusaka/work_data/K960/battery/lingyun_3100/tt.xlsx", "Sheet1", 9, 6, 1597, 3226, 60, 1400,1);
-read_xls_to_gen_ocv_table_same_r("/home/manjusaka/work_data/K960/battery/yinongcheng_4200/2line.xlsx", "TestData", 1, 5, 592, 853, 126, 2000, 1000);
+read_xls_to_gen_ocv_table_same_r("/home/manjusaka/work_data/K960/battery/yinongcheng_4200/2line.xlsx", "TestData", 1, 5, 592, 853, 80, 2000, 1000);

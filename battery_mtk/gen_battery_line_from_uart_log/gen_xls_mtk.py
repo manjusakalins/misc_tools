@@ -21,16 +21,16 @@ use_d2=0;
 
 #for mtk
 #using d5
-cmd = '''cat %s | grep AvgVbat | awk -F '.' '{print $1}' | awk -F '[' '{print $2}' | tee pylog_time ''' % inputlog
+cmd = '''cat -A %s | grep AvgVbat | awk -F '.' '{print $1}' | awk -F '[' '{print $2}' | tee pylog_time ''' % inputlog
 list_time = os.popen(cmd).readlines()
-cmd = '''cat %s | grep AvgVbat | awk -F ',SOC=' '{print $2}' | awk -F '(' '{print $2}' | awk -F ')' '{print $1}'  | tee pylog_soc ''' % inputlog
+cmd = '''cat -A %s | grep AvgVbat | awk -F ',SOC=' '{print $2}' | awk -F '(' '{print $2}' | awk -F ')' '{print $1}'  | tee pylog_soc ''' % inputlog
 list_soc=os.popen(cmd).readlines()
 
 #using d2
 if use_d2 == 1:
-    cmd = '''cat %s | grep oam_result_inf | awk -F '.' '{print $1}' | awk -F '[' '{print $2}' | tee pylog_time ''' % inputlog
+    cmd = '''cat -A %s | grep oam_result_inf | awk -F '.' '{print $1}' | awk -F '[' '{print $2}' | tee pylog_time ''' % inputlog
     list_time = os.popen(cmd).readlines()
-    cmd = '''cat %s | grep oam_result_inf | awk -F ',' '{print $2}' ''' % inputlog
+    cmd = '''cat -A %s | grep oam_result_inf | awk -F ',' '{print $2}' ''' % inputlog
     list_soc=os.popen(cmd).readlines()
 
 print len(list_soc)

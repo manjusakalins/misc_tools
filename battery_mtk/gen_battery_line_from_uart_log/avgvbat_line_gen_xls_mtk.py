@@ -108,25 +108,25 @@ print time_soc_dataset
 
 
 ##start to gen ocv table?
-same_r = 105;
+same_r = 80;
 same_i = 700;
 total_time = time_soc_dataset[len(time_soc_dataset)-1][0]
-cap_diff = 90;
-ocv_max=4082
-ocv_min=3530
+cap_diff = 100;
+ocv_max=4200
+ocv_min=3500
 
-per_unit = total_time/cap_diff+2;
+per_unit = float(total_time)/float(cap_diff);
 cnt=0;
 for vals in time_soc_dataset:
-    if vals[0] > cnt*per_unit:
-        print "%d, %d  %d" % (cnt+10, vals[1]+3200 + same_r*same_i/1000, vals[1]+3200)
+    if vals[0] >= cnt*per_unit:
+        print "%d, %d  %d" % (cnt, vals[1]+3200 + same_r*same_i/1000, vals[1]+3200)
         cnt=cnt+1;
 
 cnt=0;
 for vals in time_soc_dataset:
     if vals[0] > cnt*per_unit:
         if cnt%2==0:
-            print "{%d, %d}," % (cnt+10, vals[1]+3200 + same_r*same_i/1000)
+            print "{%d, %d}," % (cnt, vals[1]+3200 + same_r*same_i/1000)
         cnt=cnt+1;
 ##################################################
 '''
