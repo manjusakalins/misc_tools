@@ -14,9 +14,7 @@ import pycha.scatter
 import pycha.bar
 
 #FIXME: MODIFY MAX Q
-max_q = 3100
-g_print_h=0;
-
+#max_q = 3100
 
 time_soc_dataset=[];
 time_count_name=[];
@@ -92,66 +90,86 @@ for cur_line in lines:
 print sum_q
 print len(top_rec)
 print real_rec_num;
-real_max_q = sum_q/10;
-#print top_rec
-sum_q = top_rec[0]["cur"] * top_rec[0]["time"] / 36000;
-
-if g_print_h == 0:
-    out_ocv = "battery_profile_t2_num = <77>;\nbattery_profile_t2 = <0 %d\n" % top_rec[0]["ocv"]
-    out_r = "r_profile_t2_num = <77 >;\nr_profile_t2 = <0 %d\n" % top_rec[0]["ocv"]
-else:
-    out_ocv="//start define\nBATTERY_PROFILE_STRUC lk_py_battery_ocv_%dmah[] =\n{\n{0, %d},\n" % (max_q,top_rec[0]["ocv"]);
-    out_r="R_PROFILE_STRUC lk_py_r_%dmah[] =\n{\n{0, %d},\n" % (max_q,top_rec[0]["ocv"]);
 
 
-for idx in range(1,77):   
-    if idx < len(top_rec) :
-        #print top_rec[idx-1]["size"] - 1
+dtsi_start='''
+    //start
+	bat_meter_cust_c: bat_meter_cust_c{
+			compatible = "mediatek,bat_meter_cust_c";
+			q_max_pos_50 = <4800 >;
+			q_max_pos_25 = <4800 >;
+			q_max_pos_0 = <4800 >;
+			q_max_neg_10 = <4800 >;
+			q_max_pos_50_h_current = <4800 >;
+			q_max_pos_25_h_current = <4800 >;
+			q_max_pos_0_h_current = <4800 >;
+			q_max_neg_10_h_current = <4800 >;
+			num_table = <1 >;
+'''
+def jlink_print_ocv_file(max_q, g_print_h):
 
-        r = (top_rec[idx]["ocv"] - int(top_rec[idx-1]["vbats"][top_rec[idx-1]["size"] - 1]))*10000/top_rec[idx-1]["cur"]
-        dq = top_rec[idx]["cur"] * top_rec[idx]["time"] / 36000
-        #print top_rec[idx]["ocv"],int(top_rec[idx-1]["vbats"][top_rec[idx-1]["size"] - 1]), sum_q, r, (sum_q*1000/max_q + 5)/10
-    
-        #print (sum_q*1000/max_q + 5)/10, (float(sum_q)*100/float(max_q)), top_rec[idx]["ocv"], top_rec[idx]["dis_q"]
+    real_max_q = sum_q/10;
+    #print top_rec
+    sum_q = top_rec[0]["cur"] * top_rec[0]["time"] / 36000;
 
-        if g_print_h == 0:
-            out_ocv="%s%d %d\n" % (out_ocv, (sum_q*1000/real_max_q + 5)/10, top_rec[idx]["ocv"])
-        else:
-            out_ocv="%s{%d, %d},\n" % (out_ocv, (sum_q*1000/real_max_q + 5)/10, top_rec[idx]["ocv"])
-
-        if g_print_h == 0:
-            out_r="%s%d %d\n" % (out_r, r, top_rec[idx]["ocv"])
-        else:
-            out_r="%s{%d, %d},\n" % (out_r, r, top_rec[idx]["ocv"])
-        sum_q = sum_q + dq;
+    if g_print_h == 0:
+        out_ocv = "%sbattery_profile_t2_num = <77>;\nbattery_profile_t2 = <0 %d\n" % (dtsi_start, top_rec[0]["ocv"])
+        out_r = "r_profile_t2_num = <77 >;\nr_profile_t2 = <0 %d\n" % top_rec[0]["ocv"]
     else:
-        if g_print_h == 0:
-            out_ocv="%s100 3212\n" % out_ocv;
+        out_ocv="//start define\nBATTERY_PROFILE_STRUC lk_py_battery_ocv_%dmah[] =\n{\n{0, %d},\n" % (max_q,top_rec[0]["ocv"]);
+        out_r="R_PROFILE_STRUC lk_py_r_%dmah[] =\n{\n{0, %d},\n" % (max_q,top_rec[0]["ocv"]);
+
+
+    for idx in range(1,77):   
+        if idx < len(top_rec) :
+            #print top_rec[idx-1]["size"] - 1
+
+            r = (top_rec[idx]["ocv"] - int(top_rec[idx-1]["vbats"][top_rec[idx-1]["size"] - 1]))*10000/top_rec[idx-1]["cur"]
+            dq = top_rec[idx]["cur"] * top_rec[idx]["time"] / 36000
+            #print top_rec[idx]["ocv"],int(top_rec[idx-1]["vbats"][top_rec[idx-1]["size"] - 1]), sum_q, r, (sum_q*1000/max_q + 5)/10
+        
+            #print (sum_q*1000/max_q + 5)/10, (float(sum_q)*100/float(max_q)), top_rec[idx]["ocv"], top_rec[idx]["dis_q"]
+
+            if g_print_h == 0:
+                out_ocv="%s%d %d\n" % (out_ocv, (sum_q*1000/real_max_q + 5)/10, top_rec[idx]["ocv"])
+            else:
+                out_ocv="%s{%d, %d},\n" % (out_ocv, (sum_q*1000/real_max_q + 5)/10, top_rec[idx]["ocv"])
+
+            if g_print_h == 0:
+                out_r="%s%d %d\n" % (out_r, r, top_rec[idx]["ocv"])
+            else:
+                out_r="%s{%d, %d},\n" % (out_r, r, top_rec[idx]["ocv"])
+            sum_q = sum_q + dq;
         else:
-            out_ocv="%s{100, 3212},\n" % out_ocv;
+            if g_print_h == 0:
+                out_ocv="%s100 3212\n" % out_ocv;
+            else:
+                out_ocv="%s{100, 3212},\n" % out_ocv;
 
-        if g_print_h == 0:
-            out_r="%s180 3212\n" % out_r;
-        else:
-            out_r="%s{180, 3212},\n" % out_r;
+            if g_print_h == 0:
+                out_r="%s180 3212\n" % out_r;
+            else:
+                out_r="%s{180, 3212},\n" % out_r;
 
 
-if g_print_h == 0:
-    out_ocv = "%s>;\n" % out_ocv
-    out_r = "%s>;\n" % out_r
-else:
-    out_ocv="%s};\n" % out_ocv;
-    out_r="%s};\n" % out_r;
+    if g_print_h == 0:
+        out_ocv = "%s>;\n" % out_ocv
+        out_r = "%s>;\n" % out_r
+    else:
+        out_ocv="%s};\n" % out_ocv;
+        out_r="%s};\n" % out_r;
 
-#print out_ocv
-#print out_r
+    #print out_ocv
+    #print out_r
 
-if g_print_h == 0:
-    out_file=input_dir + "/lk_ocv.dtsi"
-else:
-    out_file=input_dir + "/lk_ocv_out"
-genf=open(out_file, 'w+');
-genf.write(out_ocv);
-genf.write(out_r);
-genf.close();
+    if g_print_h == 0:
+        out_file=input_dir + "/lk_ocv.dtsi"
+    else:
+        out_file=input_dir + "/lk_ocv_out.h"
+    genf=open(out_file, 'w+');
+    genf.write(out_ocv);
+    genf.write(out_r);
+    genf.close();
 
+jlink_print_ocv_file(3100, 0);
+jlink_print_ocv_file(3100, 1);
