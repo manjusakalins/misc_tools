@@ -2,7 +2,7 @@
 echo "" > patch_title
 
 
-for i in $(seq 1 40)
+for i in $(seq 1 140)
 do
     echo P$i
     ls | grep ".P"$i")" | awk '{print $0;system("tar zxf \""$0"\"")}'
@@ -34,3 +34,9 @@ do
     
     rm PatchList.txt
 done
+
+echo ' find . -name "*BPLGUInfoCustomApp_MT6735_S00_MOLY_LR9_*" | sed -n "'"/45/ \!p"'" | awk "'"{system(\"rm \" \$1)}"'" '
+
+echo "replace mk file verno"
+#ls | sed -n '/)/ !p' | awk '{system( " sed -i '"'"'s/MOLY.LR9.W1444.MD.LWTG.MP.V110.5/MOLY.LR9.W1444.MD.LWTG.MP.V110.5.P45/g'"'"' "$1)}'
+
