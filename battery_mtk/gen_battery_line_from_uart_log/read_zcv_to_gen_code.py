@@ -110,7 +110,7 @@ def read_xls_to_gen_ocv_table_same_r(in_f, sheet_name, soc_col, vol_col, r_col, 
     print time_ocv_dataset;
     print soc_r_dataset;
 #    scatterplotChart('xls_dis_curve.png', time_soc_dataset);
-    scatterplotChart('xls_dis_curve_same_r.png', time_ocv_dataset);
+    #scatterplotChart('xls_dis_curve_same_r.png', time_ocv_dataset);
     
     cnt=0;
     for vals in time_ocv_dataset:
@@ -141,6 +141,6 @@ def read_xls_to_gen_ocv_table_same_r(in_f, sheet_name, soc_col, vol_col, r_col, 
                 cnt=cnt+2;
         print outs
         print len(time_ocv_dataset)
-read_xls_to_gen_ocv_table_same_r("/home/manjusaka/work_data/b960/battery/battery/zcv.xlsx", "Sheet3", 8, 3, 9, 3, 74, 75, 2000);
+#read_xls_to_gen_ocv_table_same_r("/home/manjusaka/work_data/b960/battery/battery/zcv.xlsx", "Sheet3", 8, 3, 9, 3, 74, 75, 2000);
 #read_xls_to_gen_ocv_table_same_r("/home/manjusaka/work_data/K960/battery/lingyun_3100/tt.xlsx", "Sheet1", 9, 6, 1597, 3226, 60, 1400);
-
+read_xls_to_gen_ocv_table_same_r("/media/2Tdata/new_work_data/a708/battery/a106_5000_error_line/a106-5000_2.xlsx", "line", 6, 2, 5, 2, 119, 75, 2000);
