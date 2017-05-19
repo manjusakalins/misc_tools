@@ -1,0 +1,24 @@
+Item		ID			UID					BadBlock	Capacity	Efs	Bin	SN		SpeedR/W	Current		C.G.		Time			BadBlockNumber
+
+Order Number: 
+Machine Code: 
+MPTool Version: DM2273 V1.0
+Firmware Version: V40.S0
+MPTool Start Time:	2016-01-05 11:45:52	
+MPTool Exit  Time:	2016-01-05 11:47:10	
+Total Products:		0	
+Non-Defective Products:	0	
+Defective Products:	0	
+0 Bad Block Products:	0	
+Scan Type:		4	
+Scan Data:		3	
+Scan Configuration:	1	
+Scan Ecc Level:		*	
+InterLeave Mode:	0	
+Two Plane Mode:		0	
+Page Mode:		0	
+Back Up Blocks:		8	
+EFS Type:		Auto	
+EFS Area:			
+BadBlkThreshold:	0	
+Current Grade:		CG0-0;CG1-0;CG2-0;	
