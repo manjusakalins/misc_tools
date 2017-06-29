@@ -1,66 +1,32 @@
-#define	DISP_IOCTL_DESTROY_SESSION				DISP_IOW(202, disp_session_config)
-#define	DISP_IOCTL_TRIGGER_SESSION				DISP_IOW(203, disp_session_config)
-#define DISP_IOCTL_PREPARE_INPUT_BUFFER			DISP_IOW(204, disp_buffer_info)
-#define DISP_IOCTL_PREPARE_OUTPUT_BUFFER		DISP_IOW(205, disp_buffer_info)
-#define DISP_IOCTL_SET_INPUT_BUFFER			DISP_IOW(206, disp_session_input_config)
-#define DISP_IOCTL_SET_OUTPUT_BUFFER			DISP_IOW(207, disp_session_output_config)
-#define	DISP_IOCTL_GET_SESSION_INFO				DISP_IOW(208, disp_session_info)
-#define	DISP_IOCTL_SET_SESSION_MODE			    DISP_IOW(209, disp_session_config)
-#define	DISP_IOCTL_GET_SESSION_MODE			    DISP_IOW(210, disp_session_config)
-#define	DISP_IOCTL_SET_SESSION_TYPE				DISP_IOW(211, disp_session_config)
-#define	DISP_IOCTL_GET_SESSION_TYPE				DISP_IOW(212, disp_session_config)
-#define	DISP_IOCTL_WAIT_FOR_VSYNC				DISP_IOW(213, disp_session_vsync_config)
-#define	DISP_IOCTL_SET_MAX_LAYER_NUM			DISP_IOW(214, disp_session_layer_num_config)
-#define DISP_IOCTL_WRITE_REG       _IOW     (DISP_IOCTL_MAGIC, 1, DISP_WRITE_REG)   // also defined in atci_pq_cmd.h
-#define DISP_IOCTL_READ_REG        _IOWR    (DISP_IOCTL_MAGIC, 2, DISP_READ_REG)    // also defined in atci_pq_cmd.h
-#define DISP_IOCTL_DUMP_REG        _IOR     (DISP_IOCTL_MAGIC, 4, int)
-#define DISP_IOCTL_LOCK_THREAD     _IOR     (DISP_IOCTL_MAGIC, 5, int)
-#define DISP_IOCTL_UNLOCK_THREAD   _IOR     (DISP_IOCTL_MAGIC, 6, int)
-#define DISP_IOCTL_MARK_CMQ        _IOR     (DISP_IOCTL_MAGIC, 7, int)
-#define DISP_IOCTL_WAIT_CMQ        _IOR     (DISP_IOCTL_MAGIC, 8, int)
-#define DISP_IOCTL_SYNC_REG        _IOR     (DISP_IOCTL_MAGIC, 9, int)
-#define DISP_IOCTL_LOCK_MUTEX      _IOW     (DISP_IOCTL_MAGIC, 20, int)
-#define DISP_IOCTL_UNLOCK_MUTEX    _IOR     (DISP_IOCTL_MAGIC, 21, int)
-#define DISP_IOCTL_LOCK_RESOURCE   _IOW     (DISP_IOCTL_MAGIC, 25, int)
-#define DISP_IOCTL_UNLOCK_RESOURCE _IOR     (DISP_IOCTL_MAGIC, 26, int)
-#define DISP_IOCTL_SET_INTR        _IOR     (DISP_IOCTL_MAGIC, 10, int)
-#define DISP_IOCTL_TEST_PATH       _IOR     (DISP_IOCTL_MAGIC, 11, int)
-#define DISP_IOCTL_CLOCK_ON        _IOR     (DISP_IOCTL_MAGIC, 12, int)
-#define DISP_IOCTL_CLOCK_OFF       _IOR     (DISP_IOCTL_MAGIC, 13, int)
-#define DISP_IOCTL_RUN_DPF         _IOW     (DISP_IOCTL_MAGIC, 30, int)
-#define DISP_IOCTL_CHECK_OVL       _IOR     (DISP_IOCTL_MAGIC, 31, int)
-#define DISP_IOCTL_GET_OVL         _IOWR    (DISP_IOCTL_MAGIC, 32, DISP_OVL_INFO)
-#define DISP_IOCTL_EXEC_COMMAND    _IOW     (DISP_IOCTL_MAGIC, 33, DISP_EXEC_COMMAND)
-#define DISP_IOCTL_RESOURCE_REQUIRE   _IOR     (DISP_IOCTL_MAGIC, 34, int)
-#define DISP_IOCTL_AAL_EVENTCTL    _IOW    (DISP_IOCTL_MAGIC, 15 , int)
-#define DISP_IOCTL_AAL_GET_HIST    _IOR    (DISP_IOCTL_MAGIC, 16 , DISP_AAL_HIST)
-#define DISP_IOCTL_AAL_SET_PARAM   _IOW    (DISP_IOCTL_MAGIC, 17 , DISP_AAL_PARAM)
-#define DISP_IOCTL_AAL_INIT_REG    _IOW    (DISP_IOCTL_MAGIC, 18 , DISP_AAL_INITREG)
-#define DISP_IOCTL_SET_GAMMALUT    _IOW    (DISP_IOCTL_MAGIC, 23 , DISP_GAMMA_LUT_T)
-#define DISP_IOCTL_SET_CCORR       _IOW    (DISP_IOCTL_MAGIC, 24 , DISP_CCORR_COEF_T)
-#define DISP_IOCTL_SET_CLKON        _IOW    (DISP_IOCTL_MAGIC, 50 , DISP_MODULE_ENUM)
-#define DISP_IOCTL_SET_CLKOFF       _IOW    (DISP_IOCTL_MAGIC, 51 , DISP_MODULE_ENUM)
-#define DISP_IOCTL_MUTEX_CONTROL    _IOW    (DISP_IOCTL_MAGIC, 55 , int)    // also defined in atci_pq_cmd.h
-#define DISP_IOCTL_GET_LCMINDEX     _IOR    (DISP_IOCTL_MAGIC, 56 , int)
-#define DISP_IOCTL_SET_PQPARAM      _IOW    (DISP_IOCTL_MAGIC, 60 , DISP_PQ_PARAM)
-#define DISP_IOCTL_GET_PQPARAM      _IOR    (DISP_IOCTL_MAGIC, 61 , DISP_PQ_PARAM)
-#define DISP_IOCTL_GET_PQINDEX      _IOR    (DISP_IOCTL_MAGIC, 63,  DISPLAY_PQ_T)
-#define DISP_IOCTL_SET_PQINDEX      _IOW    (DISP_IOCTL_MAGIC, 64 , DISPLAY_PQ_T)
-#define DISP_IOCTL_SET_TDSHPINDEX   _IOW    (DISP_IOCTL_MAGIC, 65 , DISPLAY_TDSHP_T)
-#define DISP_IOCTL_GET_TDSHPINDEX   _IOR    (DISP_IOCTL_MAGIC, 66 , DISPLAY_TDSHP_T)
-#define DISP_IOCTL_SET_PQ_CAM_PARAM _IOW    (DISP_IOCTL_MAGIC, 67 , DISP_PQ_PARAM)
-#define DISP_IOCTL_GET_PQ_CAM_PARAM _IOR    (DISP_IOCTL_MAGIC, 68 , DISP_PQ_PARAM)
-#define DISP_IOCTL_SET_PQ_GAL_PARAM _IOW    (DISP_IOCTL_MAGIC, 69 , DISP_PQ_PARAM)
-#define DISP_IOCTL_GET_PQ_GAL_PARAM _IOR    (DISP_IOCTL_MAGIC, 70 , DISP_PQ_PARAM)
-#define DISP_IOCTL_PQ_SET_BYPASS_COLOR  _IOW    (DISP_IOCTL_MAGIC, 71 , int)
-#define DISP_IOCTL_PQ_SET_WINDOW    _IOW    (DISP_IOCTL_MAGIC, 72 , DISP_PQ_WIN_PARAM)
-#define DISP_IOCTL_PQ_GET_TDSHP_FLAG    _IOR    (DISP_IOCTL_MAGIC, 73 , int)
-#define DISP_IOCTL_PQ_SET_TDSHP_FLAG    _IOW    (DISP_IOCTL_MAGIC, 74 , int)
-#define DISP_IOCTL_PQ_GET_DC_PARAM  _IOR    (DISP_IOCTL_MAGIC, 75, DISP_PQ_DC_PARAM)
-#define DISP_IOCTL_PQ_SET_DC_PARAM  _IOW    (DISP_IOCTL_MAGIC, 76, DISP_PQ_DC_PARAM)
-#define DISP_IOCTL_WRITE_SW_REG     _IOW    (DISP_IOCTL_MAGIC, 77, DISP_WRITE_REG)   // also defined in atci_pq_cmd.h
-#define DISP_IOCTL_READ_SW_REG      _IOWR   (DISP_IOCTL_MAGIC, 78, DISP_READ_REG)    // also defined in atci_pq_cmd.h
-#define DISP_IOCTL_OD_CTL           _IOWR    (DISP_IOCTL_MAGIC, 80 , DISP_OD_CMD)
-#define DISP_IOCTL_OVL_ENABLE_CASCADE  _IOW    (DISP_IOCTL_MAGIC, 90 , int)
-#define DISP_IOCTL_OVL_DISABLE_CASCADE  _IOW    (DISP_IOCTL_MAGIC, 91 , int)
-#define DISP_IOCTL_SET_TPLAY_HANDLE    _IOW    (DISP_IOCTL_MAGIC, 200, unsigned int)
+#define FBIOGET_VSCREENINFO	0x4600
+#define FBIOPUT_VSCREENINFO	0x4601
+#define FBIOGET_FSCREENINFO	0x4602
+#define FBIOGETCMAP		0x4604
+#define FBIOPUTCMAP		0x4605
+#define FBIOPAN_DISPLAY		0x4606
+#define FBIOGET_CON2FBMAP	0x460F
+#define FBIOPUT_CON2FBMAP	0x4610
+#define FBIOBLANK		0x4611		/* arg: 0 or vesa level + 1 */
+#define FBIO_ALLOC              0x4613
+#define FBIO_FREE               0x4614
+#define FBIOGET_GLYPH           0x4615
+#define FBIOGET_HWCINFO         0x4616
+#define FBIOPUT_MODEINFO        0x4617
+#define FBIOGET_DISPINFO        0x4618
+#define FB_ACCEL_SAVAGE4        0x80	/* S3 Savage4                   */
+#define FB_ACCEL_SAVAGE3D       0x81	/* S3 Savage3D                  */
+#define FB_ACCEL_SAVAGE3D_MV    0x82	/* S3 Savage3D-MV               */
+#define FB_ACCEL_SAVAGE2000     0x83	/* S3 Savage2000                */
+#define FB_ACCEL_SAVAGE_MX_MV   0x84	/* S3 Savage/MX-MV              */
+#define FB_ACCEL_SAVAGE_MX      0x85	/* S3 Savage/MX                 */
+#define FB_ACCEL_SAVAGE_IX_MV   0x86	/* S3 Savage/IX-MV              */
+#define FB_ACCEL_SAVAGE_IX      0x87	/* S3 Savage/IX                 */
+#define FB_ACCEL_PROSAVAGE_PM   0x88	/* S3 ProSavage PM133           */
+#define FB_ACCEL_PROSAVAGE_KM   0x89	/* S3 ProSavage KM133           */
+#define FB_ACCEL_S3TWISTER_P    0x8a	/* S3 Twister                   */
+#define FB_ACCEL_S3TWISTER_K    0x8b	/* S3 TwisterK                  */
+#define FB_ACCEL_SUPERSAVAGE    0x8c    /* S3 Supersavage               */
+#define FB_ACCEL_PROSAVAGE_DDR  0x8d	/* S3 ProSavage DDR             */
+#define FB_ACCEL_PROSAVAGE_DDRK 0x8e	/* S3 ProSavage DDR-K           */
+#define FB_ACCEL_PUV3_UNIGFX	0xa0	/* PKUnity-v3 Unigfx		*/
+#define FB_CAP_FOURCC		1	/* Device supports FOURCC-based formats */

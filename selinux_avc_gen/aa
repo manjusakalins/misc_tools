@@ -1,0 +1,164 @@
+[  243.575082] <0>.(0)[123:read_kmsg]########## check_sdcard_in_mount 5022 ########## not exit fffffff3
+[  243.576246] <0>.(0)[123:read_kmsg]########## thread_read_kmsg 5103 ########## not ready
+[  243.577723] <0>.(0)[202:logd.auditd]type=1400 audit(1262304280.700:84): avc: denied { read } for pid=123 comm="read_kmsg" name="DCIM" dev="fuse" ino=6 scontext=u:r:kernel:s0 tcontext=u:object_r:fuse:s0 tclass=dir permissive=0
+[  243.586145] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  243.589754] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run_time] delta time=10
+[  243.593308] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  243.597097] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run] 50,60,12,12,12,12,11,0
+[  243.598172] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_total_s] 88,88,88,88,88,88,88,89,88,88
+[  243.599363] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_init_inf] 4078, 12, 88, 12, 4080, 24
+[  243.600533] <0>.(0)[148:bat_thread_kthr][oam_run_inf] 4074, 4080, 4224, -10067, -9473, 149, 152, -394, -370, 4100, 24, 12
+[  243.601905] <0>.(0)[148:bat_thread_kthr][oam_result_inf] 12, 12, 12, 12, 11, 89
+[  243.602843] <0>.(0)[148:bat_thread_kthr][name:battery_common&]AvgVbat=(4153,4222),AvgI=(624,1035),VChr=4730,AvgT=(24,24),SOC=(89,89),UI_SOC=89,ZCV=4078,CHR_Type=1 bcct:0:0 I:45000 Ibat:947
+[  243.605419] [name:linear_charging&][BATTERY] Top Off mode charge, timer=240 on 260 !!
+
+[  243.814294] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] Default CC mode charging : 50000
+[  243.815572] <0>.(0)[148:bat_thread_kthr][name:charging_hw_pmic&][charging_set_cv_voltage] [0xc]=0x3, [0x6]=0x0
+[  243.816824] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] pchr_turn_on_charging(), enable =1 
+[  243.818244] <0>.(0)[148:bat_thread_kthr]charging_full_check 1010 ===== full_cur: 624 ==> 150
+[  243.819307] <0>.(0)[148:bat_thread_kthr][name:battery_common&][100percent_jlink],UI_SOC = 89, cur: 0, target: 900
+[  243.820592] <0>.(0)[148:bat_thread_kthr][name:battery_common&]UI_SOC=(89), resetBatteryMeter=(0)
+[  243.821703] <0>-(0)[148:bat_thread_kthr][name:mtk_rtc_hal_common&]mtk_rtc_hal_common: rtc_spare_reg[0] = {32796, 127, 8}
+[  245.243916] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] init found pid:1.
+[  245.244903] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] mmcqd/0 found pid:126.
+[  245.245902] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] surfaceflinger found pid:231.
+[  245.246962] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] debuggerd found pid:400.
+[  245.247944] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] system_server found pid:601.
+[  245.248969] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] ndroid.systemui found pid:873.
+[  245.250040] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] hang_detect thread counts down 10:10.
+[  245.302682] <0>.(0)[262:thermal][name:unix&]unix: [mtk_net][socket]unix_stream_connect[25720 ]: connect [/dev/socket/rild-oem] other[22322]
+[  245.585630] <0>.(0)[123:read_kmsg]########## check_sdcard_in_mount 5022 ########## not exit fffffff3
+[  245.586794] <0>.(0)[123:read_kmsg]########## thread_read_kmsg 5103 ########## not ready
+[  245.588248] <0>.(0)[202:logd.auditd]type=1400 audit(1262304282.710:85): avc: denied { read } for pid=123 comm="read_kmsg" name="DCIM" dev="fuse" ino=6 scontext=u:r:kernel:s0 tcontext=u:object_r:fuse:s0 tclass=dir permissive=0
+[  247.594456] <0>.(0)[123:read_kmsg]########## check_sdcard_in_mount 5022 ########## not exit fffffff3
+[  247.595620] <0>.(0)[123:read_kmsg]########## thread_read_kmsg 5103 ########## not ready
+[  247.597110] <0>.(0)[202:logd.auditd]type=1400 audit(1262304284.720:86): avc: denied { read } for pid=123 comm="read_kmsg" name="DCIM" dev="fuse" ino=6 scontext=u:r:kernel:s0 tcontext=u:object_r:fuse:s0 tclass=dir permissive=0
+[  248.013998] <0>.(0)[152:wdtk-0][WDK]: kick Ex WDT,RT[248013987667]
+[  248.054013] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]CNT(dpidle,rgidle): [0] = (0,33031), [1] = (0,30852), [2] = (0,26120), [3] = (0,21790), 
+[  248.055676] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]dpidle_block_cnt: [by_cpu] = 273, [by_clk] = 777, [by_tmr] = 0, [by_oth] = 0, [by_vtg] = 0, 
+[  248.057380] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]dpidle_block_mask: 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00002000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 
+[  248.895706] <0>.(0)[202:logd.auditd]type=1404 audit(1262304286.020:87): enforcing=0 old_enforcing=1 auid=4294967295 ses=4294967295
+[  249.001807] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]DP: No enter --- SODI: No enter --- 
+[  249.605924] <0>.(0)[202:logd.auditd]type=1400 audit(1262304286.730:88): avc: denied { read } for pid=123 comm="read_kmsg" name="DCIM" dev="fuse" ino=6 scontext=u:r:kernel:s0 tcontext=u:object_r:fuse:s0 tclass=dir permissive=1
+[  249.609140] <0>.(0)[202:logd.auditd]type=1400 audit(1262304286.730:89): avc: denied { open } for pid=123 comm="read_kmsg" path="/storage/emulated/0/DCIM" dev="fuse" ino=6 scontext=u:r:kernel:s0 tcontext=u:object_r:fuse:s0 tclass=dir permissive=1
+[  249.619454] <0>.(0)[202:logd.auditd]type=1400 audit(1262304286.730:90): avc: denied { write } for pid=123 comm="read_kmsg" name="DCIM" dev="fuse" ino=6 scontext=u:r:kernel:s0 tcontext=u:object_r:fuse:s0 tclass=dir permissive=1
+[  249.625406] <0>.(0)[123:read_kmsg]########## save_kmsg_init 5050 ########## open ok: /sdcard/DCIM/kmsg_2010-01-01__00-04-46_1282577455
+[  249.629969] <0>.(0)[202:logd.auditd]type=1400 audit(1262304286.740:91): avc: denied { add_name } for pid=123 comm="read_kmsg" name="kmsg_2010-01-01__00-04-46_1282577455" scontext=u:r:kernel:s0 tcontext=u:object_r:fuse:s0 tclass=dir permissive=1
+[  249.633282] <0>.(0)[202:logd.auditd]type=1400 audit(1262304286.740:92): avc: denied { create } for pid=123 comm="read_kmsg" name="kmsg_2010-01-01__00-04-46_1282577455" scontext=u:r:kernel:s0 tcontext=u:object_r:fuse:s0 tclass=file permissive=1
+[  249.639681] <0>.(0)[123:read_kmsg]########## save_kmsg_init 5063 ########## open ok: /proc/kmsg
+[  249.642220] <0>.(0)[202:logd.auditd]type=1400 audit(1262304286.760:93): avc: denied { syslog } for pid=123 comm="read_kmsg" capability=34 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability2 permissive=1
+[  249.645738] <0>.(0)[202:logd.auditd]type=1400 audit(1262304286.760:94): avc: denied { syslog_mod } for pid=123 comm="read_kmsg" scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+[  251.203802] <0>.(0)[0:swapper/0][name:rtnetlink&][mtk_net][rtnl_lock]There is no process hold rtnl lock
+[  252.346508] <0>.(0)[265:batterywarning][name:battery_common&][Battery] show_BatteryNotify : 0
+[  252.532118] <0>.(0)[2741:GCMWriter][name:unix&]unix: [mtk_net][socket]unix_stream_connect[25742 ]: connect [/dev/socket/dnsproxyd] other[1470]
+[  253.577545] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  253.581162] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run_time] delta time=10
+[  253.584606] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  253.588246] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run] 0,60,12,12,12,12,11,0
+[  253.589311] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_total_s] 88,88,88,89,88,88,88,89,88,88
+[  253.590501] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_init_inf] 4078, 12, 88, 12, 4080, 24
+[  253.591671] <0>.(0)[148:bat_thread_kthr][oam_run_inf] 4074, 4080, 4226, -10201, -9605, 149, 152, -422, -396, 4100, 24, 12
+[  253.593043] <0>.(0)[148:bat_thread_kthr][oam_result_inf] 11, 12, 12, 12, 11, 89
+[  253.594044] <0>.(0)[148:bat_thread_kthr][name:battery_common&]AvgVbat=(4158,4222),AvgI=(645,1125),VChr=4740,AvgT=(24,24),SOC=(89,89),UI_SOC=89,ZCV=4078,CHR_Type=1 bcct:0:0 I:45000 Ibat:960
+[  253.596293] [name:linear_charging&][BATTERY] Top Off mode charge, timer=250 on 270 !!
+
+[  253.804966] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] Default CC mode charging : 50000
+[  253.806249] <0>.(0)[148:bat_thread_kthr][name:charging_hw_pmic&][charging_set_cv_voltage] [0xc]=0x3, [0x6]=0x0
+[  253.807501] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] pchr_turn_on_charging(), enable =1 
+[  253.808921] <0>.(0)[148:bat_thread_kthr]charging_full_check 1010 ===== full_cur: 645 ==> 150
+[  253.809985] <0>.(0)[148:bat_thread_kthr][name:battery_common&][100percent_jlink],UI_SOC = 89, cur: 0, target: 900
+[  253.811270] <0>.(0)[148:bat_thread_kthr][name:battery_common&]UI_SOC=(89), resetBatteryMeter=(0)
+[  253.812380] <0>-(0)[148:bat_thread_kthr][name:mtk_rtc_hal_common&]mtk_rtc_hal_common: rtc_spare_reg[0] = {32796, 127, 8}
+[  253.825080] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]CNT(soidle,rgidle): [0] = (0,33365), [1] = (0,30852), [2] = (0,26120), [3] = (0,21790), 
+[  253.826744] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]soidle_block_cnt: [by_cpu] = 141, [by_clk] = 0, [by_tmr] = 0, [by_oth] = 958, [by_vtg] = 0, 
+[  253.828448] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]soidle_block_mask: 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 
+[  255.326576] <0>.(0)[262:thermal][name:unix&]unix: [mtk_net][socket]unix_stream_connect[25746 ]: connect [/dev/socket/rild-oem] other[22322]
+[  259.005721] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]DP: No enter --- SODI: No enter --- 
+[  262.348373] <0>.(0)[265:batterywarning][name:battery_common&][Battery] show_BatteryNotify : 0
+[  263.024604] <0>.(0)[94:hps_main][name:mt_smp&]Boot slave CPU
+[  263.028611] <0>.(0)[94:hps_main][name:mt_hotplug_strategy_algo&][HPS] (0020)(1)action end(100)(182)(0)(1) (4)(4)(4)(4)(1) (52)(342)(0) (0)(0)(0) (1)(182)(343)(0)(182)
+[  263.579297] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  263.582920] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run_time] delta time=10
+[  263.586569] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  263.590197] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run] 10,60,12,12,12,12,11,0
+[  263.591272] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_total_s] 88,88,88,89,89,88,88,89,88,88
+[  263.592462] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_init_inf] 4078, 12, 88, 12, 4080, 24
+[  263.593632] <0>.(0)[148:bat_thread_kthr][oam_run_inf] 4074, 4085, 4225, -10134, -9539, 149, 154, -450, -422, 4100, 24, 12
+[  263.595072] <0>.(0)[148:bat_thread_kthr][oam_result_inf] 11, 11, 12, 12, 11, 89
+[  263.596012] <0>.(0)[148:bat_thread_kthr][name:battery_common&]AvgVbat=(4163,4222),AvgI=(664,1053),VChr=4740,AvgT=(24,24),SOC=(89,89),UI_SOC=89,ZCV=4078,CHR_Type=1 bcct:0:0 I:45000 Ibat:953
+[  263.598259] [name:linear_charging&][BATTERY] Top Off mode charge, timer=260 on 280 !!
+
+[  263.804400] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] Default CC mode charging : 50000
+[  263.805678] <0>.(0)[148:bat_thread_kthr][name:charging_hw_pmic&][charging_set_cv_voltage] [0xc]=0x3, [0x6]=0x0
+[  263.806931] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] pchr_turn_on_charging(), enable =1 
+[  263.808351] <0>.(0)[148:bat_thread_kthr]charging_full_check 1010 ===== full_cur: 664 ==> 150
+[  263.809414] <0>.(0)[148:bat_thread_kthr][name:battery_common&][100percent_jlink],UI_SOC = 89, cur: 0, target: 900
+[  263.810699] <0>.(0)[148:bat_thread_kthr][name:battery_common&]UI_SOC=(89), resetBatteryMeter=(0)
+[  263.811809] <0>-(0)[148:bat_thread_kthr][name:mtk_rtc_hal_common&]mtk_rtc_hal_common: rtc_spare_reg[0] = {32796, 127, 8}
+[  263.824258] <1>.(1)[94:hps_main]MobiCore mcd: Cpu 1 is going to die
+[  263.828205] <0>.(0)[94:hps_main]CPU1: shutdown
+[  263.830285] <0>.(0)[94:hps_main]MobiCore mcd: Cpu 1 is dead
+[  263.831449] <0>.(0)[94:hps_main][name:mt_hotplug_strategy_algo&][HPS] (0200)(2)action end(9)(9)(0)(0) (4)(4)(4)(4)(1) (9)(8)(0) (231)(8)(0) (0)(9)(8)(0)(9)
+[  265.354459] <0>.(0)[262:thermal][name:unix&]unix: [mtk_net][socket]unix_stream_connect[25748 ]: connect [/dev/socket/rild-oem] other[22322]
+[  268.024088] <0>.(0)[152:wdtk-0][WDK]: kick Ex WDT,RT[268024074407]
+[  269.010243] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]DP: No enter --- SODI: No enter --- 
+[  272.350239] <0>.(0)[265:batterywarning][name:battery_common&][Battery] show_BatteryNotify : 0
+[  272.984419] <0>.(0)[1083:watchdog][name:aed&]AEEIOCTL_RT_MON_Kick ( 300)
+[  272.985276] <0>.(0)[1083:watchdog][name:aed&][Hang_Detect] hang_detect enabled 10
+[  273.579594] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  273.583221] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run_time] delta time=10
+[  273.586923] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  273.590554] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run] 20,60,12,12,12,12,11,0
+[  273.591628] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_total_s] 88,88,88,89,89,88,88,89,88,88
+[  273.592819] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_init_inf] 4078, 12, 88, 12, 4080, 24
+[  273.594046] <0>.(0)[148:bat_thread_kthr][oam_run_inf] 4079, 4085, 4224, -10067, -9025, 152, 154, -477, -447, 4100, 24, 12
+[  273.595419] <0>.(0)[148:bat_thread_kthr][oam_result_inf] 11, 11, 12, 12, 11, 89
+[  273.596357] <0>.(0)[148:bat_thread_kthr][name:battery_common&]AvgVbat=(4168,4224),AvgI=(682,1053),VChr=4740,AvgT=(24,24),SOC=(89,89),UI_SOC=89,ZCV=4078,CHR_Type=1 bcct:0:0 I:45000 Ibat:902
+[  273.598607] [name:linear_charging&][BATTERY] Top Off mode charge, timer=270 on 290 !!
+
+[  273.804332] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] Default CC mode charging : 50000
+[  273.805610] <0>.(0)[148:bat_thread_kthr][name:charging_hw_pmic&][charging_set_cv_voltage] [0xc]=0x3, [0x6]=0x0
+[  273.806863] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] pchr_turn_on_charging(), enable =1 
+[  273.808282] <0>.(0)[148:bat_thread_kthr]charging_full_check 1010 ===== full_cur: 682 ==> 150
+[  273.809345] <0>.(0)[148:bat_thread_kthr][name:battery_common&][100percent_jlink],UI_SOC = 89, cur: 0, target: 900
+[  273.810630] <0>.(0)[148:bat_thread_kthr][name:battery_common&]UI_SOC=(89), resetBatteryMeter=(0)
+[  273.811740] <0>-(0)[148:bat_thread_kthr][name:mtk_rtc_hal_common&]mtk_rtc_hal_common: rtc_spare_reg[0] = {32796, 127, 8}
+[  273.819518] <0>.(0)[213:healthd]healthd: Unknown battery status '3'
+[  273.835355] <0>.(0)[213:healthd]healthd: battery l=89 v=4168 t=24.0 h=2 st=2 chg=u
+[  273.836379] <0>.(0)[213:healthd]healthd: battery l=89 v=4168 t=24.0 h=2 st=2 chg=u
+[  273.837921] <0>.(0)[213:healthd]healthd: send_already = 0
+[  275.253966] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] init found pid:1.
+[  275.254958] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] mmcqd/0 found pid:126.
+[  275.255956] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] surfaceflinger found pid:231.
+[  275.257016] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] debuggerd found pid:400.
+[  275.257998] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] system_server found pid:601.
+[  275.259023] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] ndroid.systemui found pid:873.
+[  275.260097] <0>.(0)[118:hang_detect][name:aed&][Hang_Detect] hang_detect thread counts down 10:10.
+[  275.379847] <0>.(0)[262:thermal][name:unix&]unix: [mtk_net][socket]unix_stream_connect[25750 ]: connect [/dev/socket/rild-oem] other[22322]
+[  278.074678] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]CNT(dpidle,rgidle): [0] = (0,34034), [1] = (0,30873), [2] = (0,26120), [3] = (0,21790), 
+[  278.076363] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]dpidle_block_cnt: [by_cpu] = 91, [by_clk] = 933, [by_tmr] = 0, [by_oth] = 0, [by_vtg] = 0, 
+[  278.078057] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]dpidle_block_mask: 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00002000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 
+[  279.014183] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]DP: No enter --- SODI: No enter --- 
+[  282.352135] <0>.(0)[265:batterywarning][name:battery_common&][Battery] show_BatteryNotify : 0
+[  283.579595] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  283.583214] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run_time] delta time=10
+[  283.589530] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][force_get_tbat] 0,546,0,0,0,24
+[  283.593532] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_run] 30,60,12,12,12,12,11,0
+[  283.594686] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_total_s] 88,88,88,89,89,88,88,89,88,88
+[  283.595878] <0>.(0)[148:bat_thread_kthr][name:battery_meter&][oam_init_inf] 4078, 12, 88, 12, 4080, 24
+[  283.597049] <0>.(0)[148:bat_thread_kthr][oam_run_inf] 4079, 4085, 4228, -9802, -9285, 152, 154, -504, -472, 4100, 24, 12
+[  283.598409] <0>.(0)[148:bat_thread_kthr][oam_result_inf] 11, 11, 12, 12, 11, 89
+[  283.599349] <0>.(0)[148:bat_thread_kthr][name:battery_common&]AvgVbat=(4173,4225),AvgI=(716,1035),VChr=4740,AvgT=(24,24),SOC=(89,89),UI_SOC=89,ZCV=4078,CHR_Type=1 bcct:0:0 I:45000 Ibat:928
+[  283.601596] [name:linear_charging&][BATTERY] Top Off mode charge, timer=280 on 300 !!
+
+[  283.804361] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] Default CC mode charging : 50000
+[  283.805639] <0>.(0)[148:bat_thread_kthr][name:charging_hw_pmic&][charging_set_cv_voltage] [0xc]=0x3, [0x6]=0x0
+[  283.806892] <0>.(0)[148:bat_thread_kthr][name:linear_charging&][BATTERY] pchr_turn_on_charging(), enable =1 
+[  283.808311] <0>.(0)[148:bat_thread_kthr]charging_full_check 1010 ===== full_cur: 716 ==> 150
+[  283.809375] <0>.(0)[148:bat_thread_kthr][name:battery_common&][100percent_jlink],UI_SOC = 89, cur: 0, target: 900
+[  283.810660] <0>.(0)[148:bat_thread_kthr][name:battery_common&]UI_SOC=(89), resetBatteryMeter=(0)
+[  283.811771] <0>-(0)[148:bat_thread_kthr][name:mtk_rtc_hal_common&]mtk_rtc_hal_common: rtc_spare_reg[0] = {32796, 127, 8}
+[  283.843446] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]CNT(soidle,rgidle): [0] = (0,34195), [1] = (0,30873), [2] = (0,26120), [3] = (0,21790), 
+[  283.845108] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]soidle_block_cnt: [by_cpu] = 70, [by_clk] = 0, [by_tmr] = 0, [by_oth] = 760, [by_vtg] = 0, 
+[  283.846801] <0>-(0)[0:swapper/0][name:mt_idle&][Power/swap]soidle_block_mask: 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 0x00000000, 
+[  285.405960] <0>.(0)[262:thermal][name:unix&]unix: [mtk_net][socket]unix_stream_connect[25752 ]: connect [/dev/socket/rild-oem] other[22322]
