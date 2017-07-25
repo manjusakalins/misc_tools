@@ -1,25 +1,24 @@
-[GPT_DA]:[0](proinfo) - region (0x8) - offset (0x00080000) - size (0x00300000)
-[GPT_DA]:[1](nvram) - region (0x8) - offset (0x00380000) - size (0x00500000)
-[GPT_DA]:[2](protect1) - region (0x8) - offset (0x00880000) - size (0x00A00000)
-[GPT_DA]:[3](protect2) - region (0x8) - offset (0x01280000) - size (0x00A00000)
-[GPT_DA]:[4](lk) - region (0x8) - offset (0x01C80000) - size (0x00080000)
-[GPT_DA]:[5](para) - region (0x8) - offset (0x01D00000) - size (0x00080000)
-[GPT_DA]:[6](boot) - region (0x8) - offset (0x01D80000) - size (0x01000000)
-[GPT_DA]:[7](recovery) - region (0x8) - offset (0x02D80000) - size (0x01000000)
-[GPT_DA]:[8](logo) - region (0x8) - offset (0x03D80000) - size (0x00800000)
-[GPT_DA]:[9](expdb) - region (0x8) - offset (0x04580000) - size (0x00A00000)
-[GPT_DA]:[10](seccfg) - region (0x8) - offset (0x04F80000) - size (0x00080000)
-[GPT_DA]:[11](oemkeystore) - region (0x8) - offset (0x05000000) - size (0x00200000)
-[GPT_DA]:[12](secro) - region (0x8) - offset (0x05200000) - size (0x00600000)
-[GPT_DA]:[13](keystore) - region (0x8) - offset (0x05800000) - size (0x00800000)
-[GPT_DA]:[14](tee1) - region (0x8) - offset (0x06000000) - size (0x00500000)
-[GPT_DA]:[15](tee2) - region (0x8) - offset (0x06500000) - size (0x00500000)
-[GPT_DA]:[16](custom) - region (0x8) - offset (0x06A00000) - size (0x12C00000)
-[GPT_DA]:[17](frp) - region (0x8) - offset (0x19600000) - size (0x00100000)
-[GPT_DA]:[18](nvdata) - region (0x8) - offset (0x19700000) - size (0x02000000)
-[GPT_DA]:[19](metadata) - region (0x8) - offset (0x1B700000) - size (0x02100000)
-[GPT_DA]:[20](system) - region (0x8) - offset (0x1D800000) - size (0x60000000)
-[GPT_DA]:[21](cache) - region (0x8) - offset (0x7D800000) - size (0x19000000)
-[GPT_DA]:[22](userdata) - region (0x8) - offset (0x96800000) - size (0x0000000100000000)
-[GPT_DA]:[23](intsd) - region (0x8) - offset (0x0000000196800000) - size (0x000000020C580000)
-[GPT_DA]:[24](flashinfo) - region (0x8) - offset (0x00000003A2D80000) - size (0x01000000)
+[GPT_PL][0]name=proinfo, part_id=8, start_sect=0x400, nr_sects=0x1800
+[GPT_PL][1]name=nvram, part_id=8, start_sect=0x1C00, nr_sects=0x2800
+[GPT_PL][2]name=protect1, part_id=8, start_sect=0x4400, nr_sects=0x5000
+[GPT_PL][3]name=protect2, part_id=8, start_sect=0x9400, nr_sects=0x5000
+[GPT_PL][4]name=lk, part_id=8, start_sect=0xE400, nr_sects=0x400
+[GPT_PL][5]name=para, part_id=8, start_sect=0xE800, nr_sects=0x400
+[GPT_PL][6]name=boot, part_id=8, start_sect=0xEC00, nr_sects=0x8000
+[GPT_PL][7]name=recovery, part_id=8, start_sect=0x16C00, nr_sects=0x8000
+[GPT_PL][8]name=logo, part_id=8, start_sect=0x1EC00, nr_sects=0x4000
+[GPT_PL][9]name=expdb, part_id=8, start_sect=0x22C00, nr_sects=0x5000
+[GPT_PL][10]name=seccfg, part_id=8, start_sect=0x27C00, nr_sects=0x400
+[GPT_PL][11]name=oemkeystore, part_id=8, start_sect=0x28000, nr_sects=0x1000
+[GPT_PL][12]name=secro, part_id=8, start_sect=0x29000, nr_sects=0x3000
+[GPT_PL][13]name=keystore, part_id=8, start_sect=0x2C000, nr_sects=0x4000
+[GPT_PL][14]name=tee1, part_id=8, start_sect=0x30000, nr_sects=0x2800
+[GPT_PL][15]name=tee2, part_id=8, start_sect=0x32800, nr_sects=0x2800
+[GPT_PL][16]name=custom, part_id=8, start_sect=0x35000, nr_sects=0x96000
+[GPT_PL][17]name=frp, part_id=8, start_sect=0xCB000, nr_sects=0x800
+[GPT_PL][18]name=nvdata, part_id=8, start_sect=0xCB800, nr_sects=0x10000
+[GPT_PL][19]name=metadata, part_id=8, start_sect=0xDB800, nr_sects=0x10800
+[GPT_PL][20]name=system, part_id=8, start_sect=0xEC000, nr_sects=0x300000
+[GPT_PL][21]name=cache, part_id=8, start_sect=0x3EC000, nr_sects=0x20000
+[GPT_PL][22]name=userdata, part_id=8, start_sect=0x40C000, nr_sects=0x706BC00
+[GPT_PL][23]name=flashinfo, part_id=8, start_sect=0x7477C00, nr_sects=0x8000

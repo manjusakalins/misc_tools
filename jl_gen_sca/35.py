@@ -23,7 +23,7 @@ import random
 #  operation_type: BOOTLOADERS
 #  reserve: 0x00
 
-inf=open("jty_gpt");
+inf=open("m_gpt");
 pt_lines=inf.readlines();
 inf.close();
 #print pt_lines
