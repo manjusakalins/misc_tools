@@ -19,5 +19,6 @@
 [GPT_PL][18]name=system, part_id=8, start_sect=0xE8000, nr_sects=0x300000
 [GPT_PL][19]name=cache, part_id=8, start_sect=0x3E8000, nr_sects=0x80000
 [GPT_PL][20]name=userdata, part_id=8, start_sect=0x468000, nr_sects=0x300000
-[GPT_PL][21]name=intsd, part_id=8, start_sect=0x768000, nr_sects=0x155FC00
-[GPT_PL][22]name=flashinfo, part_id=8, start_sect=0x1CC7C00, nr_sects=0x8000
+[GPT_PL][21]name=intsd, part_id=8, start_sect=0x768000, nr_sects=0x32CFC00
+[GPT_PL][22]name=flashinfo, part_id=8, start_sect=0x3A37C00, nr_sects=0x8000
+

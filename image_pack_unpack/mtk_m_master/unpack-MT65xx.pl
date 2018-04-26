@@ -77,7 +77,7 @@ if ((substr($input, 0, 4) eq "\x88\x16\x88\x58") & (substr($input, 8, 4) eq "LOG
 		unpack_boot($input, "kernel and ramdisk");
 	}
 } elsif ((substr($input,0,5) eq "\x3a\xff\x26\xed\x01")){
-	print "Valid Android signature found...\n";
+	print "sytemValid Android signature found...\n";
 	if( $ARGV[1]){
 		die colored ("\nError: $ARGV[1] switch can't be used with system images", 'red') . "\n"
 			if ($ARGV[1] ne "-kernel_only" && $ARGV[1] ne "-ramdisk_only");

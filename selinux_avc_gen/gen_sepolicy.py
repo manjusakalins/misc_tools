@@ -30,6 +30,8 @@ for cline in pt_lines:
         continue;
     sc=get_target_val(cline, "scontext=u:r:", ":");
     tc=get_target_val(cline, "tcontext=u:object_r:", ":");
+    if (len(tc) == 0):
+        tc=get_target_val(cline, "tcontext=u:r:", ":");
     tclass=get_target_val(cline, "tclass=", " ");
     oper=get_target_val(cline, "{ ", " }");
     key='%s %s:%s' %(sc, tc, tclass);

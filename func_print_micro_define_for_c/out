@@ -1,163 +1,103 @@
 {
 	switch(cmd) {
-	case FBIOGET_VSCREENINFO:
+	case DISP_IOCTL_CREATE_SESSION:
 	{
-		printk("###############FBIOGET_VSCREENINFO\n");
+		printk("###############DISP_IOCTL_CREATE_SESSION\n");
 		break;
 	}
-	case FBIOPUT_VSCREENINFO:
+	case DISP_IOCTL_DESTROY_SESSION:
 	{
-		printk("###############FBIOPUT_VSCREENINFO\n");
+		printk("###############DISP_IOCTL_DESTROY_SESSION\n");
 		break;
 	}
-	case FBIOGET_FSCREENINFO:
+	case DISP_IOCTL_TRIGGER_SESSION:
 	{
-		printk("###############FBIOGET_FSCREENINFO\n");
+		printk("###############DISP_IOCTL_TRIGGER_SESSION\n");
 		break;
 	}
-	case FBIOGETCMAP:
+	case DISP_IOCTL_PREPARE_INPUT_BUFFER:
 	{
-		printk("###############FBIOGETCMAP\n");
+		printk("###############DISP_IOCTL_PREPARE_INPUT_BUFFER\n");
 		break;
 	}
-	case FBIOPUTCMAP:
+	case DISP_IOCTL_PREPARE_OUTPUT_BUFFER:
 	{
-		printk("###############FBIOPUTCMAP\n");
+		printk("###############DISP_IOCTL_PREPARE_OUTPUT_BUFFER\n");
 		break;
 	}
-	case FBIOPAN_DISPLAY:
+	case DISP_IOCTL_SET_INPUT_BUFFER:
 	{
-		printk("###############FBIOPAN_DISPLAY\n");
+		printk("###############DISP_IOCTL_SET_INPUT_BUFFER\n");
 		break;
 	}
-	case FBIOGET_CON2FBMAP:
+	case DISP_IOCTL_SET_OUTPUT_BUFFER:
 	{
-		printk("###############FBIOGET_CON2FBMAP\n");
+		printk("###############DISP_IOCTL_SET_OUTPUT_BUFFER\n");
 		break;
 	}
-	case FBIOPUT_CON2FBMAP:
+	case DISP_IOCTL_GET_SESSION_INFO:
 	{
-		printk("###############FBIOPUT_CON2FBMAP\n");
+		printk("###############DISP_IOCTL_GET_SESSION_INFO\n");
 		break;
 	}
-	case FBIOBLANK:
+	case DISP_IOCTL_SET_SESSION_MODE:
 	{
-		printk("###############FBIOBLANK\n");
+		printk("###############DISP_IOCTL_SET_SESSION_MODE\n");
 		break;
 	}
-	case FBIO_ALLOC:
+	case DISP_IOCTL_GET_SESSION_MODE:
 	{
-		printk("###############FBIO_ALLOC\n");
+		printk("###############DISP_IOCTL_GET_SESSION_MODE\n");
 		break;
 	}
-	case FBIO_FREE:
+	case DISP_IOCTL_SET_SESSION_TYPE:
 	{
-		printk("###############FBIO_FREE\n");
+		printk("###############DISP_IOCTL_SET_SESSION_TYPE\n");
 		break;
 	}
-	case FBIOGET_GLYPH:
+	case DISP_IOCTL_GET_SESSION_TYPE:
 	{
-		printk("###############FBIOGET_GLYPH\n");
+		printk("###############DISP_IOCTL_GET_SESSION_TYPE\n");
 		break;
 	}
-	case FBIOGET_HWCINFO:
+	case DISP_IOCTL_WAIT_FOR_VSYNC:
 	{
-		printk("###############FBIOGET_HWCINFO\n");
+		printk("###############DISP_IOCTL_WAIT_FOR_VSYNC\n");
 		break;
 	}
-	case FBIOPUT_MODEINFO:
+	case DISP_IOCTL_SET_MAX_LAYER_NUM:
 	{
-		printk("###############FBIOPUT_MODEINFO\n");
+		printk("###############DISP_IOCTL_SET_MAX_LAYER_NUM\n");
 		break;
 	}
-	case FBIOGET_DISPINFO:
+	case DISP_IOCTL_SET_VSYNC_FPS:
 	{
-		printk("###############FBIOGET_DISPINFO\n");
+		printk("###############DISP_IOCTL_SET_VSYNC_FPS\n");
 		break;
 	}
-	case FB_ACCEL_SAVAGE4:
+	case DISP_IOCTL_GET_PRESENT_FENCE:
 	{
-		printk("###############FB_ACCEL_SAVAGE4\n");
+		printk("###############DISP_IOCTL_GET_PRESENT_FENCE\n");
 		break;
 	}
-	case FB_ACCEL_SAVAGE3D:
+	case DISP_IOCTL_GET_IS_DRIVER_SUSPEND:
 	{
-		printk("###############FB_ACCEL_SAVAGE3D\n");
+		printk("###############DISP_IOCTL_GET_IS_DRIVER_SUSPEND\n");
 		break;
 	}
-	case FB_ACCEL_SAVAGE3D_MV:
+	case DISP_IOCTL_GET_DISPLAY_CAPS:
 	{
-		printk("###############FB_ACCEL_SAVAGE3D_MV\n");
+		printk("###############DISP_IOCTL_GET_DISPLAY_CAPS\n");
 		break;
 	}
-	case FB_ACCEL_SAVAGE2000:
+	case DISP_IOCTL_INSERT_SESSION_BUFFERS:
 	{
-		printk("###############FB_ACCEL_SAVAGE2000\n");
+		printk("###############DISP_IOCTL_INSERT_SESSION_BUFFERS\n");
 		break;
 	}
-	case FB_ACCEL_SAVAGE_MX_MV:
+	case DISP_IOCTL_FRAME_CONFIG:
 	{
-		printk("###############FB_ACCEL_SAVAGE_MX_MV\n");
-		break;
-	}
-	case FB_ACCEL_SAVAGE_MX:
-	{
-		printk("###############FB_ACCEL_SAVAGE_MX\n");
-		break;
-	}
-	case FB_ACCEL_SAVAGE_IX_MV:
-	{
-		printk("###############FB_ACCEL_SAVAGE_IX_MV\n");
-		break;
-	}
-	case FB_ACCEL_SAVAGE_IX:
-	{
-		printk("###############FB_ACCEL_SAVAGE_IX\n");
-		break;
-	}
-	case FB_ACCEL_PROSAVAGE_PM:
-	{
-		printk("###############FB_ACCEL_PROSAVAGE_PM\n");
-		break;
-	}
-	case FB_ACCEL_PROSAVAGE_KM:
-	{
-		printk("###############FB_ACCEL_PROSAVAGE_KM\n");
-		break;
-	}
-	case FB_ACCEL_S3TWISTER_P:
-	{
-		printk("###############FB_ACCEL_S3TWISTER_P\n");
-		break;
-	}
-	case FB_ACCEL_S3TWISTER_K:
-	{
-		printk("###############FB_ACCEL_S3TWISTER_K\n");
-		break;
-	}
-	case FB_ACCEL_SUPERSAVAGE:
-	{
-		printk("###############FB_ACCEL_SUPERSAVAGE\n");
-		break;
-	}
-	case FB_ACCEL_PROSAVAGE_DDR:
-	{
-		printk("###############FB_ACCEL_PROSAVAGE_DDR\n");
-		break;
-	}
-	case FB_ACCEL_PROSAVAGE_DDRK:
-	{
-		printk("###############FB_ACCEL_PROSAVAGE_DDRK\n");
-		break;
-	}
-	case FB_ACCEL_PUV3_UNIGFX:
-	{
-		printk("###############FB_ACCEL_PUV3_UNIGFX\n");
-		break;
-	}
-	case FB_CAP_FOURCC:
-	{
-		printk("###############FB_CAP_FOURCC\n");
+		printk("###############DISP_IOCTL_FRAME_CONFIG\n");
 		break;
 	}
 	default:
