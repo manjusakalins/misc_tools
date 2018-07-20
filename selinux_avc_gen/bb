@@ -1,0 +1,2 @@
+
+[  101.026644] <0>.(0)[1:init]init: avc:  denied  { set } for property=jro.jlink.ext_ap pid=1983 uid=2000 gid=2000 scontext=u:r:shell:s0 tcontext=u:object_r:default_prop:s0 tclass=property_service permissive=1

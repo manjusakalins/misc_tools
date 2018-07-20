@@ -1,0 +1,3 @@
+./tools/releasetools/build_image.py /media/2Tdata/souce_code/my_code/misc_tools/image_pack_unpack/mtk_S/JYNFZ10001.img-images/ y960/system_image_info.txt ./system.img ./
+
+echo "we need project's system_image_info.txt and its root's file_contexts.bin(sepolicy)"

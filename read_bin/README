@@ -1,0 +1,4 @@
+1: USE BUS HOUND 抓log 取出bin的实际内容。
+2： 
+dd if=/dev/zero of=b.bin bs=1 count=128
+cat final_outbin22 >> b.bin

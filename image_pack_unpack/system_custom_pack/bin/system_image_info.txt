@@ -1,0 +1,11 @@
+fs_type=ext4
+system_size=1627389952
+userdata_size=1610612736
+custom_size=314572800
+cache_fs_type=ext4
+cache_size=419430400
+extfs_sparse_flag=-s
+squashfs_sparse_flag=-s
+selinux_fc=out/target/product/y960_mt6753_66_n/root/file_contexts.bin
+system_verity_block_device=/dev/block/platform/mtk-msdc.0/11230000.msdc0/by-name/system
+skip_fsck=true

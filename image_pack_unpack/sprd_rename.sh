@@ -20,6 +20,7 @@ mv $first_w"E"* persist.img
 mv $first_w"V"* prodnv.img
 mv $first_w"K"* proinfo.img
 mv $first_w"J"* sysinfo.img
+mv $first_w"T"* vendor.img
 
 mv $first_w"I"* LTE_DSP.bin
 mv $first_w"G"* SC9600_sharkls_3593_CUST_Base_NV_MIPI.dat

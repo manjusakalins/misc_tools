@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+#coding=utf-8
+import os,sys
+from optparse import OptionParser 
+
+'''
+使用 main.py -c [system/custom] -d [systemdir/customdir] -S file_contexts.bin -o outputfile -l size [-t time] [-s systemdir] 
+	option:
+		-c : (class)  system/custom
+		-d : (directory) systemdir/customdir
+		-o : (outputfile) system.img/custom.img
+		-l : (long size) image partition size
+		-S : (file_contexts.bin)
+		-t : (可选) ota中时间戳
+		-s : (可选) systemdir 从build.prop获取timestamp
+'''
+if __name__ == '__main__':
+    parser = OptionParser(usage="%prog [options]")
+    parser.add_option("-c","--class",action="store",type="string",dest="pclass",help="")
+    parser.add_option("-d","--directory",action="store",type="string",dest="pdirec",help="")
+    parser.add_option("-o","--output",action="store",type="string",dest="poutput",help="")
+    parser.add_option("-S","--filecontexts",action="store",type="string",dest="pfilecontext",help="")
+    parser.add_option("-l","--size",action="store",type="int",dest="psize",help="")
+    parser.add_option("-t","--time",action="store",type="string",dest="ptime",help="")
+    parser.add_option("-s","--systemdir",action="store",type="string",dest="psystemdir",help="")
+    (options,args)=parser.parse_args()
+    if options.pclass:
+        print "class:",options.pclass
+    if options.pdirec:
+        print "directory:",options.pdirec
+    if options.poutput:
+        print "output:",options.poutput
+    if options.pfilecontext:
+        print "filecontext:",options.pfilecontext
+    if options.psize:
+        print "size:",options.psize
+    if options.ptime:
+        print "time:",options.ptime
+    if options.psystemdir:
+        print "systemdir:",options.psystemdir
+
+    cmd=". system_verity_size.py " + options.psize
+    realsize=os.popen(cmd).read() 
+    print "realsize=",realsize
+    

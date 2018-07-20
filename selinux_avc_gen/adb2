@@ -1,0 +1,28 @@
+[   26.719139] c1 type=1400 audit(1420097056.059:7): avc: denied { read } for pid=212 comm="charge" name="gpio" dev="debugfs" ino=28 scontext=u:r:charge:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+
+[   26.720972] c1 type=1400 audit(1420097056.059:7): avc: denied { read } for pid=212 comm="charge" name="gpio" dev="debugfs" ino=28 scontext=u:r:charge:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+
+[   26.720998] c1 type=1400 audit(1420097056.059:8): avc: denied { open } for pid=212 comm="charge" path="/sys/kernel/debug/gpio" dev="debugfs" ino=28 scontext=u:r:charge:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+
+[   26.733331] c1 type=1400 audit(1420097056.059:8): avc: denied { open } for pid=212 comm="charge" path="/sys/kernel/debug/gpio" dev="debugfs" ino=28 scontext=u:r:charge:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+
+[   26.797624] c1 type=1400 audit(1420097056.139:17): avc: denied { execute_no_trans } for pid=219 comm="sh" path="/vendor/bin/toybox_vendor" dev="mmcblk0p29" ino=226 scontext=u:r:charge:s0 tcontext=u:object_r:vendor_toolbox_exec:s0 tclass=file permissive=1
+
+[   26.840963] c1 type=1400 audit(1420097056.139:17): avc: denied { execute_no_trans } for pid=219 comm="sh" path="/vendor/bin/toybox_vendor" dev="mmcblk0p29" ino=226 scontext=u:r:charge:s0 tcontext=u:object_r:vendor_toolbox_exec:s0 tclass=file permissive=1
+
+[   26.840987] c1 type=1400 audit(1420097056.169:18): avc: denied { write } for pid=219 comm="setprop" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:charge:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   26.841244] c1 type=1400 audit(1420097056.169:18): avc: denied { write } for pid=219 comm="setprop" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:charge:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   26.841264] c1 type=1400 audit(1420097056.169:19): avc: denied { connectto } for pid=219 comm="setprop" path="/dev/socket/property_service" scontext=u:r:charge:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   28.708160] c1 selinux: avc:  denied  { set } for property=sys.usb.configfs pid=219 uid=0 gid=0 scontext=u:r:charge:s0 tcontext=u:object_r:system_radio_prop:s0 tclass=property_service permissive=1
+
+[   29.503381] c1 type=1400 audit(1420097056.169:19): avc: denied { connectto } for pid=219 comm="setprop" path="/dev/socket/property_service" scontext=u:r:charge:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+{'charge vendor_toolbox_exec:file': {'execute_no_trans': 1}, 'charge property_socket:sock_file': {'write': 1}, 'charge system_radio_prop:property_service': {'set': 1}, 'charge init:unix_stream_socket': {'connectto': 1}, 'charge debugfs:file': {'read': 1, 'open': 1}}
+allow charge vendor_toolbox_exec:file{  execute_no_trans };
+allow charge property_socket:sock_file{  write };
+allow charge system_radio_prop:property_service{  set };
+allow charge init:unix_stream_socket{  connectto };
+allow charge debugfs:file{  read open };

@@ -1,0 +1,21 @@
+//
+[472:UICompThread_0]@@@@@@@@@@@@@@@2_config_ovl_input 6635
+[475:VSyncThread_0]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_GET_SESSION_INFO, arg=0xb376a818
+[239:surfaceflinger]mtk_disp_mgr_ioctl, cmd=unknown, arg=0xbef795ec
+[239:surfaceflinger]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_GET_SESSION_INFO, arg=0xbef795c8
+[239:surfaceflinger]mtk_disp_mgr_ioctl, cmd=unknown, arg=0xbef7924c
+[239:surfaceflinger]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_PREPARE_INPUT_BUFFER, arg=0xbef78de0
+[472:UICompThread_0]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_SET_INPUT_BUFFER, arg=0xb3e2a00c
+[475:VSyncThread_0]mtk_disp_mgr_ioctl, cmd=DISP_IOCL_WAIT_FOR_VSYNC, arg=0xb376a858
+[472:UICompThread_0]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_TRIGGER_SESSION, arg=0xb39c35f4
+[472:UICompThread_0]@@@@@@@@@@@@@@@2_config_ovl_input 6635
+[475:VSyncThread_0]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_GET_SESSION_INFO, arg=0xb376a818
+[239:surfaceflinger]mtk_disp_mgr_ioctl, cmd=unknown, arg=0xbef795ec
+[239:surfaceflinger]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_GET_SESSION_INFO, arg=0xbef795c8
+[239:surfaceflinger]mtk_disp_mgr_ioctl, cmd=unknown, arg=0xbef7924c
+[239:surfaceflinger]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_PREPARE_INPUT_BUFFER, arg=0xbef78de0
+[472:UICompThread_0]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_SET_INPUT_BUFFER, arg=0xb3e2a00c
+[475:VSyncThread_0]mtk_disp_mgr_ioctl, cmd=DISP_IOCL_WAIT_FOR_VSYNC, arg=0xb376a858
+[472:UICompThread_0]mtk_disp_mgr_ioctl, cmd=DISP_IOCTL_TRIGGER_SESSION, arg=0xb39c35f4
+[472:UICompThread_0]@@@@@@@@@@@@@@@2_config_ovl_input 6635
+

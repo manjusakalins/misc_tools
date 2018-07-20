@@ -1,0 +1,6 @@
+同一文件夹打包出img不同是由于文件时间不一样引起,可以忽略
+OTA版本
+./main.py -c system -d ota/SYSTEM/ -C ota/META/filesystem_config.txt -S ota/META/file_contexts.bin  -o system.img -l 1627389952 -t 1230739200
+非OTA版本
+./main.py -c system -d ota/SYSTEM/ -S ota/META/file_contexts.bin  -o system.img -l 1627389952
+

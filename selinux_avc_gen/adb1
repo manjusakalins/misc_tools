@@ -1,0 +1,453 @@
+[   26.575669] c0 audit: type=1400 audit(1420097055.909:3): avc:  denied  { write } for  pid=205 comm="vndservicemanag" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:vndservicemanager:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   26.575853] c0 audit: type=1400 audit(1420097055.909:4): avc:  denied  { connectto } for  pid=205 comm="vndservicemanag" path="/dev/socket/property_service" scontext=u:r:vndservicemanager:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   26.597879] c1 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=205 uid=1000 gid=1000 scontext=u:r:vndservicemanager:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   26.653650] c0 audit: type=1400 audit(1420097055.989:5): avc:  denied  { write } for  pid=203 comm="servicemanager" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:servicemanager:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   26.653756] c0 audit: type=1400 audit(1420097055.989:6): avc:  denied  { connectto } for  pid=203 comm="servicemanager" path="/dev/socket/property_service" scontext=u:r:servicemanager:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   26.719139] c1 type=1400 audit(1420097056.059:7): avc: denied { read } for pid=212 comm="charge" name="gpio" dev="debugfs" ino=28 scontext=u:r:charge:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+
+[   26.720972] c1 type=1400 audit(1420097056.059:7): avc: denied { read } for pid=212 comm="charge" name="gpio" dev="debugfs" ino=28 scontext=u:r:charge:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+
+[   26.720998] c1 type=1400 audit(1420097056.059:8): avc: denied { open } for pid=212 comm="charge" path="/sys/kernel/debug/gpio" dev="debugfs" ino=28 scontext=u:r:charge:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+
+[   26.733331] c1 type=1400 audit(1420097056.059:8): avc: denied { open } for pid=212 comm="charge" path="/sys/kernel/debug/gpio" dev="debugfs" ino=28 scontext=u:r:charge:s0 tcontext=u:object_r:debugfs:s0 tclass=file permissive=1
+
+[   26.733359] c1 type=1400 audit(1420097056.069:9): avc: denied { read } for pid=170 comm="read_kmsg" name="ylog" dev="mmcblk0p32" ino=114 scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=dir permissive=1
+
+[   26.742358] c1 type=1400 audit(1420097056.069:9): avc: denied { read } for pid=170 comm="read_kmsg" name="ylog" dev="mmcblk0p32" ino=114 scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=dir permissive=1
+
+[   26.742384] c1 type=1400 audit(1420097056.069:10): avc: denied { open } for pid=170 comm="read_kmsg" path="/data/ylog" dev="mmcblk0p32" ino=114 scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=dir permissive=1
+
+[   26.742633] c1 type=1400 audit(1420097056.069:10): avc: denied { open } for pid=170 comm="read_kmsg" path="/data/ylog" dev="mmcblk0p32" ino=114 scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=dir permissive=1
+
+[   26.742652] c1 type=1400 audit(1420097056.069:11): avc: denied { write } for pid=170 comm="read_kmsg" name="ylog" dev="mmcblk0p32" ino=114 scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=dir permissive=1
+
+[   26.753185] c1 type=1400 audit(1420097056.069:11): avc: denied { write } for pid=170 comm="read_kmsg" name="ylog" dev="mmcblk0p32" ino=114 scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=dir permissive=1
+
+[   26.753209] c1 type=1400 audit(1420097056.069:12): avc: denied { add_name } for pid=170 comm="read_kmsg" name="kmsg_2015-01-01__07-24-16_378827923" scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=dir permissive=1
+
+[   26.753520] c1 type=1400 audit(1420097056.069:12): avc: denied { add_name } for pid=170 comm="read_kmsg" name="kmsg_2015-01-01__07-24-16_378827923" scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=dir permissive=1
+
+[   26.753541] c1 type=1400 audit(1420097056.069:13): avc: denied { create } for pid=170 comm="read_kmsg" name="kmsg_2015-01-01__07-24-16_378827923" scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=file permissive=1
+
+[   26.753764] c1 type=1400 audit(1420097056.069:13): avc: denied { create } for pid=170 comm="read_kmsg" name="kmsg_2015-01-01__07-24-16_378827923" scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=file permissive=1
+
+[   26.753785] c1 type=1400 audit(1420097056.069:14): avc: denied { write open } for pid=170 comm="read_kmsg" path="/data/ylog/kmsg_2015-01-01__07-24-16_378827923" dev="mmcblk0p32" ino=8683 scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=file permissive=1
+
+[   26.754000] c1 type=1400 audit(1420097056.069:14): avc: denied { write open } for pid=170 comm="read_kmsg" path="/data/ylog/kmsg_2015-01-01__07-24-16_378827923" dev="mmcblk0p32" ino=8683 scontext=u:r:kernel:s0 tcontext=u:object_r:ylog_file:s0 tclass=file permissive=1
+
+[   26.754021] c1 type=1400 audit(1420097056.069:15): avc: denied { syslog } for pid=170 comm="read_kmsg" capability=34 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability2 permissive=1
+
+[   26.754230] c1 type=1400 audit(1420097056.069:15): avc: denied { syslog } for pid=170 comm="read_kmsg" capability=34 scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=capability2 permissive=1
+
+[   26.754249] c1 type=1400 audit(1420097056.069:16): avc: denied { syslog_mod } for pid=170 comm="read_kmsg" scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+
+[   26.797596] c1 type=1400 audit(1420097056.069:16): avc: denied { syslog_mod } for pid=170 comm="read_kmsg" scontext=u:r:kernel:s0 tcontext=u:r:kernel:s0 tclass=system permissive=1
+
+[   26.797624] c1 type=1400 audit(1420097056.139:17): avc: denied { execute_no_trans } for pid=219 comm="sh" path="/vendor/bin/toybox_vendor" dev="mmcblk0p29" ino=226 scontext=u:r:charge:s0 tcontext=u:object_r:vendor_toolbox_exec:s0 tclass=file permissive=1
+
+[   26.840963] c1 type=1400 audit(1420097056.139:17): avc: denied { execute_no_trans } for pid=219 comm="sh" path="/vendor/bin/toybox_vendor" dev="mmcblk0p29" ino=226 scontext=u:r:charge:s0 tcontext=u:object_r:vendor_toolbox_exec:s0 tclass=file permissive=1
+
+[   26.840987] c1 type=1400 audit(1420097056.169:18): avc: denied { write } for pid=219 comm="setprop" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:charge:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   26.841244] c1 type=1400 audit(1420097056.169:18): avc: denied { write } for pid=219 comm="setprop" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:charge:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   26.841264] c1 type=1400 audit(1420097056.169:19): avc: denied { connectto } for pid=219 comm="setprop" path="/dev/socket/property_service" scontext=u:r:charge:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   28.490325] c1 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=203 uid=1000 gid=1000 scontext=u:r:servicemanager:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   28.674000] c1 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=204 uid=1000 gid=1000 scontext=u:r:hwservicemanager:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   28.708160] c1 selinux: avc:  denied  { set } for property=sys.usb.configfs pid=219 uid=0 gid=0 scontext=u:r:charge:s0 tcontext=u:object_r:system_radio_prop:s0 tclass=property_service permissive=1
+
+[   29.503381] c1 type=1400 audit(1420097056.169:19): avc: denied { connectto } for pid=219 comm="setprop" path="/dev/socket/property_service" scontext=u:r:charge:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   29.618810] c1 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=248 uid=1058 gid=1000 scontext=u:r:tombstoned:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   29.779351] c1 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=249 uid=1000 gid=1000 scontext=u:r:tee:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   29.845207] c1 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=244 uid=1000 gid=1000 scontext=u:r:refnotify:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   30.164944] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=239 uid=1000 gid=1000 scontext=u:r:phasecheckserver:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   30.400106] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=232 uid=0 gid=0 scontext=u:r:installd:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   30.521758] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=241 uid=1010 gid=1010 scontext=u:r:wificond:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   30.714605] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=247 uid=1000 gid=0 scontext=u:r:gatekeeperd:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   30.833214] c1 type=1400 audit(1420097058.829:20): avc: denied { write } for pid=248 comm="tombstoned" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:tombstoned:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   30.851045] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=238 uid=0 gid=0 scontext=u:r:netd:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   30.871838] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=234 uid=1013 gid=1031 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   30.936142] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=233 uid=1017 gid=1017 scontext=u:r:keystore:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   30.945462] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=231 uid=1019 gid=1019 scontext=u:r:drmserver:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   30.976612] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=242 uid=1046 gid=1006 scontext=u:r:mediacodec:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   31.016243] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=251 uid=2000 gid=2000 scontext=u:r:adbd:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   31.062187] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=240 uid=0 gid=1032 scontext=u:r:storaged:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   31.137534] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=236 uid=1013 gid=1013 scontext=u:r:mediametrics:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   31.157342] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=237 uid=1013 gid=1005 scontext=u:r:mediaserver:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   31.231683] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=235 uid=1040 gid=1026 scontext=u:r:mediaextractor:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   31.312434] c1 type=1400 audit(1420097058.829:20): avc: denied { write } for pid=248 comm="tombstoned" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:tombstoned:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.334314] c1 type=1400 audit(1420097058.839:21): avc: denied { connectto } for pid=248 comm="tombstoned" path="/dev/socket/property_service" scontext=u:r:tombstoned:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.354929] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=228 uid=1041 gid=1005 scontext=u:r:audioserver:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   31.355266] c1 type=1400 audit(1420097059.109:22): avc: denied { connectto } for pid=248 comm="tombstoned" path="/dev/socket/property_service" scontext=u:r:tombstoned:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.355291] c1 type=1400 audit(1420097059.419:23): avc: denied { write } for pid=239 comm="phasecheckserve" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:phasecheckserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.356597] c1 type=1400 audit(1420097059.419:23): avc: denied { write } for pid=239 comm="phasecheckserve" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:phasecheckserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.356648] c1 type=1400 audit(1420097059.419:24): avc: denied { connectto } for pid=239 comm="phasecheckserve" path="/dev/socket/property_service" scontext=u:r:phasecheckserver:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.356932] c1 type=1400 audit(1420097059.419:24): avc: denied { connectto } for pid=239 comm="phasecheckserve" path="/dev/socket/property_service" scontext=u:r:phasecheckserver:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.356957] c1 type=1400 audit(1420097059.549:25): avc: denied { write } for pid=232 comm="installd" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:installd:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.357971] c1 type=1400 audit(1420097059.549:25): avc: denied { write } for pid=232 comm="installd" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:installd:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.357996] c1 type=1400 audit(1420097059.549:26): avc: denied { connectto } for pid=232 comm="installd" path="/dev/socket/property_service" scontext=u:r:installd:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.358206] c1 type=1400 audit(1420097059.549:26): avc: denied { connectto } for pid=232 comm="installd" path="/dev/socket/property_service" scontext=u:r:installd:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.358227] c1 type=1400 audit(1420097059.809:27): avc: denied { write } for pid=247 comm="gatekeeperd" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:gatekeeperd:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.359202] c1 type=1400 audit(1420097059.809:27): avc: denied { write } for pid=247 comm="gatekeeperd" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:gatekeeperd:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.359227] c1 type=1400 audit(1420097059.809:28): avc: denied { connectto } for pid=247 comm="gatekeeperd" path="/dev/socket/property_service" scontext=u:r:gatekeeperd:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.359438] c1 type=1400 audit(1420097059.809:28): avc: denied { connectto } for pid=247 comm="gatekeeperd" path="/dev/socket/property_service" scontext=u:r:gatekeeperd:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.359459] c1 type=1400 audit(1420097059.849:29): avc: denied { write } for pid=234 comm="mediadrmserver" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.360636] c1 type=1400 audit(1420097059.849:29): avc: denied { write } for pid=234 comm="mediadrmserver" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.360666] c1 type=1400 audit(1420097059.849:30): avc: denied { connectto } for pid=234 comm="mediadrmserver" path="/dev/socket/property_service" scontext=u:r:mediadrmserver:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.360947] c1 type=1400 audit(1420097059.849:30): avc: denied { connectto } for pid=234 comm="mediadrmserver" path="/dev/socket/property_service" scontext=u:r:mediadrmserver:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.360971] c1 type=1400 audit(1420097059.859:31): avc: denied { connectto } for pid=232 comm="installd" path="/dev/socket/property_service" scontext=u:r:installd:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.361174] c1 type=1400 audit(1420097059.859:31): avc: denied { connectto } for pid=232 comm="installd" path="/dev/socket/property_service" scontext=u:r:installd:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.361196] c1 type=1400 audit(1420097060.009:32): avc: denied { write } for pid=233 comm="keystore" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:keystore:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.362407] c1 type=1400 audit(1420097060.009:32): avc: denied { write } for pid=233 comm="keystore" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:keystore:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.362431] c1 type=1400 audit(1420097060.009:33): avc: denied { connectto } for pid=233 comm="keystore" path="/dev/socket/property_service" scontext=u:r:keystore:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.362694] c1 type=1400 audit(1420097060.009:33): avc: denied { connectto } for pid=233 comm="keystore" path="/dev/socket/property_service" scontext=u:r:keystore:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.362716] c1 type=1400 audit(1420097060.139:34): avc: denied { write } for pid=231 comm="drmserver" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:drmserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.363888] c1 type=1400 audit(1420097060.139:34): avc: denied { write } for pid=231 comm="drmserver" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:drmserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.363913] c1 type=1400 audit(1420097060.139:35): avc: denied { connectto } for pid=231 comm="drmserver" path="/dev/socket/property_service" scontext=u:r:drmserver:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.364158] c1 type=1400 audit(1420097060.139:35): avc: denied { connectto } for pid=231 comm="drmserver" path="/dev/socket/property_service" scontext=u:r:drmserver:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.364187] c1 type=1400 audit(1420097060.189:36): avc: denied { write } for pid=242 comm="android.hardwar" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediacodec:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.365395] c1 type=1400 audit(1420097060.189:36): avc: denied { write } for pid=242 comm="android.hardwar" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediacodec:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.365421] c1 type=1400 audit(1420097060.189:37): avc: denied { connectto } for pid=242 comm="android.hardwar" path="/dev/socket/property_service" scontext=u:r:mediacodec:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.365670] c1 type=1400 audit(1420097060.189:37): avc: denied { connectto } for pid=242 comm="android.hardwar" path="/dev/socket/property_service" scontext=u:r:mediacodec:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.365696] c1 type=1400 audit(1420097060.309:38): avc: denied { write } for pid=231 comm="drmserver" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:drmserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.365858] c1 type=1400 audit(1420097060.309:38): avc: denied { write } for pid=231 comm="drmserver" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:drmserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.365881] c1 type=1400 audit(1420097060.329:39): avc: denied { write } for pid=233 comm="keystore" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:keystore:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.366052] c1 type=1400 audit(1420097060.329:39): avc: denied { write } for pid=233 comm="keystore" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:keystore:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.366075] c1 type=1400 audit(1420097060.329:40): avc: denied { write } for pid=240 comm="storaged" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:storaged:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.367159] c1 type=1400 audit(1420097060.329:40): avc: denied { write } for pid=240 comm="storaged" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:storaged:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.367181] c1 type=1400 audit(1420097060.339:41): avc: denied { connectto } for pid=240 comm="storaged" path="/dev/socket/property_service" scontext=u:r:storaged:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.367473] c1 type=1400 audit(1420097060.339:41): avc: denied { connectto } for pid=240 comm="storaged" path="/dev/socket/property_service" scontext=u:r:storaged:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.367496] c1 type=1400 audit(1420097060.339:42): avc: denied { write } for pid=242 comm="android.hardwar" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediacodec:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.367699] c1 type=1400 audit(1420097060.339:42): avc: denied { write } for pid=242 comm="android.hardwar" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediacodec:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.367723] c1 type=1400 audit(1420097060.339:43): avc: denied { write } for pid=234 comm="mediadrmserver" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.367911] c1 type=1400 audit(1420097060.339:43): avc: denied { write } for pid=234 comm="mediadrmserver" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediadrmserver:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.367933] c1 type=1400 audit(1420097060.369:44): avc: denied { write } for pid=236 comm="mediametrics" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediametrics:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.369139] c1 type=1400 audit(1420097060.369:44): avc: denied { write } for pid=236 comm="mediametrics" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:mediametrics:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   31.369165] c1 type=1400 audit(1420097060.389:45): avc: denied { connectto } for pid=236 comm="mediametrics" path="/dev/socket/property_service" scontext=u:r:mediametrics:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.369385] c1 type=1400 audit(1420097060.389:45): avc: denied { connectto } for pid=236 comm="mediametrics" path="/dev/socket/property_service" scontext=u:r:mediametrics:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   31.369405] c1 type=1400 audit(1420097060.669:49): avc: denied { connectto } for pid=230 comm="cameraserver" path="/dev/socket/property_service" scontext=u:r:cameraserver:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   32.403148] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=230 uid=1047 gid=1005 scontext=u:r:cameraserver:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   33.865908] c2 selinux: avc:  denied  { set } for property=persist.sys.ylog.log_retry pid=229 uid=0 gid=0 scontext=u:r:srtd:s0 tcontext=u:object_r:system_prop:s0 tclass=property_service permissive=1
+
+[   33.867452] c1 type=1400 audit(1420097061.749:50): avc: denied { connectto } for pid=230 comm="cameraserver" path="/dev/socket/property_service" scontext=u:r:cameraserver:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   33.867480] c1 type=1400 audit(1420097063.199:51): avc: denied { write } for pid=229 comm="srtd" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:srtd:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   33.868537] c1 type=1400 audit(1420097063.199:51): avc: denied { write } for pid=229 comm="srtd" name="property_service" dev="tmpfs" ino=11447 scontext=u:r:srtd:s0 tcontext=u:object_r:property_socket:s0 tclass=sock_file permissive=1
+
+[   33.868558] c1 type=1400 audit(1420097063.199:52): avc: denied { connectto } for pid=229 comm="srtd" path="/dev/socket/property_service" scontext=u:r:srtd:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   34.428076] c1 type=1400 audit(1420097063.199:52): avc: denied { connectto } for pid=229 comm="srtd" path="/dev/socket/property_service" scontext=u:r:srtd:s0 tcontext=u:r:init:s0 tclass=unix_stream_socket permissive=1
+
+[   34.428106] c1 type=1400 audit(1420097063.759:53): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:storageproxyd_default_prop:s0" dev="tmpfs" ino=11386 scontext=u:r:shell:s0 tcontext=u:object_r:storageproxyd_default_prop:s0 tclass=file permissive=1
+
+[   34.429323] c1 type=1400 audit(1420097063.759:53): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:storageproxyd_default_prop:s0" dev="tmpfs" ino=11386 scontext=u:r:shell:s0 tcontext=u:object_r:storageproxyd_default_prop:s0 tclass=file permissive=1
+
+[   34.429350] c1 type=1400 audit(1420097063.759:54): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:storageproxyd_default_prop:s0" dev="tmpfs" ino=11386 scontext=u:r:shell:s0 tcontext=u:object_r:storageproxyd_default_prop:s0 tclass=file permissive=1
+
+[   34.429621] c1 type=1400 audit(1420097063.759:54): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:storageproxyd_default_prop:s0" dev="tmpfs" ino=11386 scontext=u:r:shell:s0 tcontext=u:object_r:storageproxyd_default_prop:s0 tclass=file permissive=1
+
+[   34.429668] c1 type=1400 audit(1420097063.769:55): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:radio_noril_prop:s0" dev="tmpfs" ino=11387 scontext=u:r:shell:s0 tcontext=u:object_r:radio_noril_prop:s0 tclass=file permissive=1
+
+[   34.429951] c1 type=1400 audit(1420097063.769:55): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:radio_noril_prop:s0" dev="tmpfs" ino=11387 scontext=u:r:shell:s0 tcontext=u:object_r:radio_noril_prop:s0 tclass=file permissive=1
+
+[   34.429973] c1 type=1400 audit(1420097063.769:56): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:radio_noril_prop:s0" dev="tmpfs" ino=11387 scontext=u:r:shell:s0 tcontext=u:object_r:radio_noril_prop:s0 tclass=file permissive=1
+
+[   34.430202] c1 type=1400 audit(1420097063.769:56): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:radio_noril_prop:s0" dev="tmpfs" ino=11387 scontext=u:r:shell:s0 tcontext=u:object_r:radio_noril_prop:s0 tclass=file permissive=1
+
+[   34.430223] c1 type=1400 audit(1420097063.769:57): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:opengles_prop:s0" dev="tmpfs" ino=11388 scontext=u:r:shell:s0 tcontext=u:object_r:opengles_prop:s0 tclass=file permissive=1
+
+[   34.430437] c1 type=1400 audit(1420097063.769:57): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:opengles_prop:s0" dev="tmpfs" ino=11388 scontext=u:r:shell:s0 tcontext=u:object_r:opengles_prop:s0 tclass=file permissive=1
+
+[   34.430458] c1 type=1400 audit(1420097063.769:58): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:opengles_prop:s0" dev="tmpfs" ino=11388 scontext=u:r:shell:s0 tcontext=u:object_r:opengles_prop:s0 tclass=file permissive=1
+
+[   34.430668] c1 type=1400 audit(1420097063.769:58): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:opengles_prop:s0" dev="tmpfs" ino=11388 scontext=u:r:shell:s0 tcontext=u:object_r:opengles_prop:s0 tclass=file permissive=1
+
+[   34.430687] c1 type=1400 audit(1420097063.769:59): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:qemu_cmdline:s0" dev="tmpfs" ino=11390 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_cmdline:s0 tclass=file permissive=1
+
+[   34.430902] c1 type=1400 audit(1420097063.769:59): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:qemu_cmdline:s0" dev="tmpfs" ino=11390 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_cmdline:s0 tclass=file permissive=1
+
+[   34.430923] c1 type=1400 audit(1420097063.769:60): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:qemu_cmdline:s0" dev="tmpfs" ino=11390 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_cmdline:s0 tclass=file permissive=1
+
+[   34.431135] c1 type=1400 audit(1420097063.769:60): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:qemu_cmdline:s0" dev="tmpfs" ino=11390 scontext=u:r:shell:s0 tcontext=u:object_r:qemu_cmdline:s0 tclass=file permissive=1
+
+[   34.431155] c1 type=1400 audit(1420097063.769:61): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:storage_prop:s0" dev="tmpfs" ino=11392 scontext=u:r:shell:s0 tcontext=u:object_r:storage_prop:s0 tclass=file permissive=1
+
+[   34.431365] c1 type=1400 audit(1420097063.769:61): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:storage_prop:s0" dev="tmpfs" ino=11392 scontext=u:r:shell:s0 tcontext=u:object_r:storage_prop:s0 tclass=file permissive=1
+
+[   34.431384] c1 type=1400 audit(1420097063.769:62): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:storage_prop:s0" dev="tmpfs" ino=11392 scontext=u:r:shell:s0 tcontext=u:object_r:storage_prop:s0 tclass=file permissive=1
+
+[   34.431582] c1 type=1400 audit(1420097063.769:62): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:storage_prop:s0" dev="tmpfs" ino=11392 scontext=u:r:shell:s0 tcontext=u:object_r:storage_prop:s0 tclass=file permissive=1
+
+[   34.431603] c1 type=1400 audit(1420097063.769:63): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:bt_prop:s0" dev="tmpfs" ino=11393 scontext=u:r:shell:s0 tcontext=u:object_r:bt_prop:s0 tclass=file permissive=1
+
+[   34.431833] c1 type=1400 audit(1420097063.769:63): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:bt_prop:s0" dev="tmpfs" ino=11393 scontext=u:r:shell:s0 tcontext=u:object_r:bt_prop:s0 tclass=file permissive=1
+
+[   34.431853] c1 type=1400 audit(1420097063.769:64): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:bt_prop:s0" dev="tmpfs" ino=11393 scontext=u:r:shell:s0 tcontext=u:object_r:bt_prop:s0 tclass=file permissive=1
+
+[   34.432054] c1 type=1400 audit(1420097063.769:64): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:bt_prop:s0" dev="tmpfs" ino=11393 scontext=u:r:shell:s0 tcontext=u:object_r:bt_prop:s0 tclass=file permissive=1
+
+[   34.432076] c1 type=1400 audit(1420097063.769:65): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:apr_prop:s0" dev="tmpfs" ino=11394 scontext=u:r:shell:s0 tcontext=u:object_r:apr_prop:s0 tclass=file permissive=1
+
+[   34.432304] c1 type=1400 audit(1420097063.769:65): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:apr_prop:s0" dev="tmpfs" ino=11394 scontext=u:r:shell:s0 tcontext=u:object_r:apr_prop:s0 tclass=file permissive=1
+
+[   34.432326] c1 type=1400 audit(1420097063.769:66): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:apr_prop:s0" dev="tmpfs" ino=11394 scontext=u:r:shell:s0 tcontext=u:object_r:apr_prop:s0 tclass=file permissive=1
+
+[   34.432561] c1 type=1400 audit(1420097063.769:66): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:apr_prop:s0" dev="tmpfs" ino=11394 scontext=u:r:shell:s0 tcontext=u:object_r:apr_prop:s0 tclass=file permissive=1
+
+[   34.432581] c1 type=1400 audit(1420097063.769:67): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:wifi_prop:s0" dev="tmpfs" ino=11395 scontext=u:r:shell:s0 tcontext=u:object_r:wifi_prop:s0 tclass=file permissive=1
+
+[   34.432797] c1 type=1400 audit(1420097063.769:67): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:wifi_prop:s0" dev="tmpfs" ino=11395 scontext=u:r:shell:s0 tcontext=u:object_r:wifi_prop:s0 tclass=file permissive=1
+
+[   34.433052] c1 type=1400 audit(1420097063.769:68): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:wifi_prop:s0" dev="tmpfs" ino=11395 scontext=u:r:shell:s0 tcontext=u:object_r:wifi_prop:s0 tclass=file permissive=1
+
+[   34.433386] c1 type=1400 audit(1420097063.769:68): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:wifi_prop:s0" dev="tmpfs" ino=11395 scontext=u:r:shell:s0 tcontext=u:object_r:wifi_prop:s0 tclass=file permissive=1
+
+[   34.433407] c1 type=1400 audit(1420097063.769:69): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:firstboot_prop:s0" dev="tmpfs" ino=11403 scontext=u:r:shell:s0 tcontext=u:object_r:firstboot_prop:s0 tclass=file permissive=1
+
+[   34.433654] c1 type=1400 audit(1420097063.769:69): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:firstboot_prop:s0" dev="tmpfs" ino=11403 scontext=u:r:shell:s0 tcontext=u:object_r:firstboot_prop:s0 tclass=file permissive=1
+
+[   34.433676] c1 type=1400 audit(1420097063.769:70): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:firstboot_prop:s0" dev="tmpfs" ino=11403 scontext=u:r:shell:s0 tcontext=u:object_r:firstboot_prop:s0 tclass=file permissive=1
+
+[   34.433964] c1 type=1400 audit(1420097063.769:70): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:firstboot_prop:s0" dev="tmpfs" ino=11403 scontext=u:r:shell:s0 tcontext=u:object_r:firstboot_prop:s0 tclass=file permissive=1
+
+[   34.433988] c1 type=1400 audit(1420097063.769:71): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:persistent_properties_ready_prop:s0" dev="tmpfs" ino=11404 scontext=u:r:shell:s0 tcontext=u:object_r:persistent_properties_ready_prop:s0 tclass=file permissive=1
+
+[   34.434272] c1 type=1400 audit(1420097063.769:71): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:persistent_properties_ready_prop:s0" dev="tmpfs" ino=11404 scontext=u:r:shell:s0 tcontext=u:object_r:persistent_properties_ready_prop:s0 tclass=file permissive=1
+
+[   34.434295] c1 type=1400 audit(1420097063.769:72): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:persistent_properties_ready_prop:s0" dev="tmpfs" ino=11404 scontext=u:r:shell:s0 tcontext=u:object_r:persistent_properties_ready_prop:s0 tclass=file permissive=1
+
+[   34.434526] c1 type=1400 audit(1420097063.769:72): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:persistent_properties_ready_prop:s0" dev="tmpfs" ino=11404 scontext=u:r:shell:s0 tcontext=u:object_r:persistent_properties_ready_prop:s0 tclass=file permissive=1
+
+[   34.434550] c1 type=1400 audit(1420097063.769:73): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:boottime_prop:s0" dev="tmpfs" ino=11407 scontext=u:r:shell:s0 tcontext=u:object_r:boottime_prop:s0 tclass=file permissive=1
+
+[   34.434768] c1 type=1400 audit(1420097063.769:73): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:boottime_prop:s0" dev="tmpfs" ino=11407 scontext=u:r:shell:s0 tcontext=u:object_r:boottime_prop:s0 tclass=file permissive=1
+
+[   34.434789] c1 type=1400 audit(1420097063.779:74): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:boottime_prop:s0" dev="tmpfs" ino=11407 scontext=u:r:shell:s0 tcontext=u:object_r:boottime_prop:s0 tclass=file permissive=1
+
+[   34.435009] c1 type=1400 audit(1420097063.779:74): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:boottime_prop:s0" dev="tmpfs" ino=11407 scontext=u:r:shell:s0 tcontext=u:object_r:boottime_prop:s0 tclass=file permissive=1
+
+[   34.435030] c1 type=1400 audit(1420097063.779:75): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:overlay_prop:s0" dev="tmpfs" ino=11410 scontext=u:r:shell:s0 tcontext=u:object_r:overlay_prop:s0 tclass=file permissive=1
+
+[   34.435240] c1 type=1400 audit(1420097063.779:75): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:overlay_prop:s0" dev="tmpfs" ino=11410 scontext=u:r:shell:s0 tcontext=u:object_r:overlay_prop:s0 tclass=file permissive=1
+
+[   34.435260] c1 type=1400 audit(1420097063.779:76): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:overlay_prop:s0" dev="tmpfs" ino=11410 scontext=u:r:shell:s0 tcontext=u:object_r:overlay_prop:s0 tclass=file permissive=1
+
+[   34.435486] c1 type=1400 audit(1420097063.779:76): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:overlay_prop:s0" dev="tmpfs" ino=11410 scontext=u:r:shell:s0 tcontext=u:object_r:overlay_prop:s0 tclass=file permissive=1
+
+[   34.435506] c1 type=1400 audit(1420097063.779:77): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:safemode_prop:s0" dev="tmpfs" ino=11411 scontext=u:r:shell:s0 tcontext=u:object_r:safemode_prop:s0 tclass=file permissive=1
+
+[   34.435704] c1 type=1400 audit(1420097063.779:77): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:safemode_prop:s0" dev="tmpfs" ino=11411 scontext=u:r:shell:s0 tcontext=u:object_r:safemode_prop:s0 tclass=file permissive=1
+
+[   34.435724] c1 type=1400 audit(1420097063.779:78): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:safemode_prop:s0" dev="tmpfs" ino=11411 scontext=u:r:shell:s0 tcontext=u:object_r:safemode_prop:s0 tclass=file permissive=1
+
+[   34.435982] c1 type=1400 audit(1420097063.779:78): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:safemode_prop:s0" dev="tmpfs" ino=11411 scontext=u:r:shell:s0 tcontext=u:object_r:safemode_prop:s0 tclass=file permissive=1
+
+[   34.436005] c1 type=1400 audit(1420097063.779:79): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:netd_stable_secret_prop:s0" dev="tmpfs" ino=11412 scontext=u:r:shell:s0 tcontext=u:object_r:netd_stable_secret_prop:s0 tclass=file permissive=1
+
+[   34.436281] c1 type=1400 audit(1420097063.779:79): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:netd_stable_secret_prop:s0" dev="tmpfs" ino=11412 scontext=u:r:shell:s0 tcontext=u:object_r:netd_stable_secret_prop:s0 tclass=file permissive=1
+
+[   34.436303] c1 type=1400 audit(1420097063.779:80): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:netd_stable_secret_prop:s0" dev="tmpfs" ino=11412 scontext=u:r:shell:s0 tcontext=u:object_r:netd_stable_secret_prop:s0 tclass=file permissive=1
+
+[   34.436528] c1 type=1400 audit(1420097063.779:80): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:netd_stable_secret_prop:s0" dev="tmpfs" ino=11412 scontext=u:r:shell:s0 tcontext=u:object_r:netd_stable_secret_prop:s0 tclass=file permissive=1
+
+[   34.436549] c1 type=1400 audit(1420097063.779:81): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:mmc_prop:s0" dev="tmpfs" ino=11413 scontext=u:r:shell:s0 tcontext=u:object_r:mmc_prop:s0 tclass=file permissive=1
+
+[   34.436762] c1 type=1400 audit(1420097063.779:81): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:mmc_prop:s0" dev="tmpfs" ino=11413 scontext=u:r:shell:s0 tcontext=u:object_r:mmc_prop:s0 tclass=file permissive=1
+
+[   34.436781] c1 type=1400 audit(1420097063.779:82): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:mmc_prop:s0" dev="tmpfs" ino=11413 scontext=u:r:shell:s0 tcontext=u:object_r:mmc_prop:s0 tclass=file permissive=1
+
+[   34.436979] c1 type=1400 audit(1420097063.779:82): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:mmc_prop:s0" dev="tmpfs" ino=11413 scontext=u:r:shell:s0 tcontext=u:object_r:mmc_prop:s0 tclass=file permissive=1
+
+[   34.436998] c1 type=1400 audit(1420097063.779:83): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:net_dns_prop:s0" dev="tmpfs" ino=11419 scontext=u:r:shell:s0 tcontext=u:object_r:net_dns_prop:s0 tclass=file permissive=1
+
+[   34.437199] c1 type=1400 audit(1420097063.779:83): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:net_dns_prop:s0" dev="tmpfs" ino=11419 scontext=u:r:shell:s0 tcontext=u:object_r:net_dns_prop:s0 tclass=file permissive=1
+
+[   34.437220] c1 type=1400 audit(1420097063.779:84): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:net_dns_prop:s0" dev="tmpfs" ino=11419 scontext=u:r:shell:s0 tcontext=u:object_r:net_dns_prop:s0 tclass=file permissive=1
+
+[   34.437593] c1 type=1400 audit(1420097063.779:84): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:net_dns_prop:s0" dev="tmpfs" ino=11419 scontext=u:r:shell:s0 tcontext=u:object_r:net_dns_prop:s0 tclass=file permissive=1
+
+[   34.437615] c1 type=1400 audit(1420097063.779:85): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:media_prop:s0" dev="tmpfs" ino=11421 scontext=u:r:shell:s0 tcontext=u:object_r:media_prop:s0 tclass=file permissive=1
+
+[   34.437878] c1 type=1400 audit(1420097063.779:85): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:media_prop:s0" dev="tmpfs" ino=11421 scontext=u:r:shell:s0 tcontext=u:object_r:media_prop:s0 tclass=file permissive=1
+
+[   34.437899] c1 type=1400 audit(1420097063.779:86): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:media_prop:s0" dev="tmpfs" ino=11421 scontext=u:r:shell:s0 tcontext=u:object_r:media_prop:s0 tclass=file permissive=1
+
+[   34.438168] c1 type=1400 audit(1420097063.779:86): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:media_prop:s0" dev="tmpfs" ino=11421 scontext=u:r:shell:s0 tcontext=u:object_r:media_prop:s0 tclass=file permissive=1
+
+[   34.438189] c1 type=1400 audit(1420097063.779:87): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:dumpstate_options_prop:s0" dev="tmpfs" ino=11429 scontext=u:r:shell:s0 tcontext=u:object_r:dumpstate_options_prop:s0 tclass=file permissive=1
+
+[   34.438476] c1 type=1400 audit(1420097063.779:87): avc: denied { open } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:dumpstate_options_prop:s0" dev="tmpfs" ino=11429 scontext=u:r:shell:s0 tcontext=u:object_r:dumpstate_options_prop:s0 tclass=file permissive=1
+
+[   34.438499] c1 type=1400 audit(1420097063.779:88): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:dumpstate_options_prop:s0" dev="tmpfs" ino=11429 scontext=u:r:shell:s0 tcontext=u:object_r:dumpstate_options_prop:s0 tclass=file permissive=1
+
+[   39.020856] c2 type=1400 audit(1420097063.779:88): avc: denied { getattr } for pid=335 comm="getprop" path="/dev/__properties__/u:object_r:dumpstate_options_prop:s0" dev="tmpfs" ino=11429 scontext=u:r:shell:s0 tcontext=u:object_r:dumpstate_options_prop:s0 tclass=file permissive=1
+
+[   39.049572] c2 type=1400 audit(1420097068.359:91): avc: denied { read } for pid=242 comm="HwBinder:242_1" name="u:object_r:media_prop:s0" dev="tmpfs" ino=11421 scontext=u:r:mediacodec:s0 tcontext=u:object_r:media_prop:s0 tclass=file permissive=1
+
+[   39.072348] c2 type=1400 audit(1420097068.359:91): avc: denied { read } for pid=242 comm="HwBinder:242_1" name="u:object_r:media_prop:s0" dev="tmpfs" ino=11421 scontext=u:r:mediacodec:s0 tcontext=u:object_r:media_prop:s0 tclass=file permissive=1
+
+[   39.097556] c2 type=1400 audit(1420097068.359:92): avc: denied { open } for pid=242 comm="HwBinder:242_1" path="/dev/__properties__/u:object_r:media_prop:s0" dev="tmpfs" ino=11421 scontext=u:r:mediacodec:s0 tcontext=u:object_r:media_prop:s0 tclass=file permissive=1
+
+[   39.122337] c2 type=1400 audit(1420097068.359:92): avc: denied { open } for pid=242 comm="HwBinder:242_1" path="/dev/__properties__/u:object_r:media_prop:s0" dev="tmpfs" ino=11421 scontext=u:r:mediacodec:s0 tcontext=u:object_r:media_prop:s0 tclass=file permissive=1
+
+[   39.147634] c2 type=1400 audit(1420097068.359:93): avc: denied { getattr } for pid=242 comm="HwBinder:242_1" path="/dev/__properties__/u:object_r:media_prop:s0" dev="tmpfs" ino=11421 scontext=u:r:mediacodec:s0 tcontext=u:object_r:media_prop:s0 tclass=file permissive=1
+
+{'hwservicemanager system_prop:property_service': {'set': 1}, 'phasecheckserver system_prop:property_service': {'set': 1}, 'shell bt_prop:file': {'getattr': 1, 'open': 1}, 'keystore property_socket:sock_file': {'write': 1}, 'shell apr_prop:file': {'getattr': 1, 'open': 1}, 'cameraserver init:unix_stream_socket': {'connectto': 1}, 'shell overlay_prop:file': {'getattr': 1, 'open': 1}, 'drmserver init:unix_stream_socket': {'connectto': 1}, 'storaged init:unix_stream_socket': {'connectto': 1}, 'mediadrmserver init:unix_stream_socket': {'connectto': 1}, 'shell qemu_cmdline:file': {'getattr': 1, 'open': 1}, 'charge system_radio_prop:property_service': {'set': 1}, 'srtd init:unix_stream_socket': {'connectto': 1}, 'shell firstboot_prop:file': {'getattr': 1, 'open': 1}, 'shell boottime_prop:file': {'getattr': 1, 'open': 1}, 'mediacodec property_socket:sock_file': {'write': 1}, 'mediaserver system_prop:property_service': {'set': 1}, 'installd system_prop:property_service': {'set': 1}, 'vndservicemanager property_socket:sock_file': {'write': 1}, 'shell net_dns_prop:file': {'getattr': 1, 'open': 1}, 'mediametrics system_prop:property_service': {'set': 1}, 'vndservicemanager system_prop:property_service': {'set': 1}, 'storaged property_socket:sock_file': {'write': 1}, 'kernel ylog_file:file': {'write open': 1, 'create': 1}, 'servicemanager system_prop:property_service': {'set': 1}, 'vndservicemanager init:unix_stream_socket': {'connectto': 1}, 'phasecheckserver init:unix_stream_socket': {'connectto': 1}, 'gatekeeperd init:unix_stream_socket': {'connectto': 1}, 'shell opengles_prop:file': {'getattr': 1, 'open': 1}, 'srtd property_socket:sock_file': {'write': 1}, 'shell netd_stable_secret_prop:file': {'getattr': 1, 'open': 1}, 'drmserver property_socket:sock_file': {'write': 1}, 'refnotify system_prop:property_service': {'set': 1}, 'netd system_prop:property_service': {'set': 1}, 'shell radio_noril_prop:file': {'getattr': 1, 'open': 1}, 'mediaextractor system_prop:property_service': {'set': 1}, 'srtd system_prop:property_service': {'set': 1}, 'storaged system_prop:property_service': {'set': 1}, 'mediametrics property_socket:sock_file': {'write': 1}, 'installd property_socket:sock_file': {'write': 1}, 'keystore init:unix_stream_socket': {'connectto': 1}, 'mediadrmserver property_socket:sock_file': {'write': 1}, 'gatekeeperd property_socket:sock_file': {'write': 1}, 'mediacodec media_prop:file': {'read': 1, 'getattr': 1, 'open': 1}, 'shell safemode_prop:file': {'getattr': 1, 'open': 1}, 'wificond system_prop:property_service': {'set': 1}, 'kernel kernel:system': {'syslog_mod': 1}, 'tombstoned init:unix_stream_socket': {'connectto': 1}, 'gatekeeperd system_prop:property_service': {'set': 1}, 'shell media_prop:file': {'getattr': 1, 'open': 1}, 'tombstoned system_prop:property_service': {'set': 1}, 'shell wifi_prop:file': {'getattr': 1, 'open': 1}, 'shell storage_prop:file': {'getattr': 1, 'open': 1}, 'servicemanager property_socket:sock_file': {'write': 1}, 'installd init:unix_stream_socket': {'connectto': 1}, 'shell persistent_properties_ready_prop:file': {'getattr': 1, 'open': 1}, 'charge debugfs:file': {'read': 1, 'open': 1}, 'phasecheckserver property_socket:sock_file': {'write': 1}, 'mediadrmserver system_prop:property_service': {'set': 1}, 'mediacodec system_prop:property_service': {'set': 1}, 'mediametrics init:unix_stream_socket': {'connectto': 1}, 'cameraserver system_prop:property_service': {'set': 1}, 'tombstoned property_socket:sock_file': {'write': 1}, 'tee system_prop:property_service': {'set': 1}, 'charge init:unix_stream_socket': {'connectto': 1}, 'kernel ylog_file:dir': {'read': 1, 'write': 1, 'open': 1, 'add_name': 1}, 'servicemanager init:unix_stream_socket': {'connectto': 1}, 'audioserver system_prop:property_service': {'set': 1}, 'shell storageproxyd_default_prop:file': {'getattr': 1, 'open': 1}, 'keystore system_prop:property_service': {'set': 1}, 'shell dumpstate_options_prop:file': {'getattr': 1, 'open': 1}, 'drmserver system_prop:property_service': {'set': 1}, 'kernel kernel:capability2': {'syslog': 1}, 'charge vendor_toolbox_exec:file': {'execute_no_trans': 1}, 'charge property_socket:sock_file': {'write': 1}, 'mediacodec init:unix_stream_socket': {'connectto': 1}, 'adbd system_prop:property_service': {'set': 1}, 'shell mmc_prop:file': {'getattr': 1, 'open': 1}}
+allow hwservicemanager system_prop:property_service{  set };
+allow phasecheckserver system_prop:property_service{  set };
+allow shell bt_prop:file{  getattr open };
+allow keystore property_socket:sock_file{  write };
+allow shell apr_prop:file{  getattr open };
+allow cameraserver init:unix_stream_socket{  connectto };
+allow shell overlay_prop:file{  getattr open };
+allow drmserver init:unix_stream_socket{  connectto };
+allow storaged init:unix_stream_socket{  connectto };
+allow mediadrmserver init:unix_stream_socket{  connectto };
+allow shell qemu_cmdline:file{  getattr open };
+allow charge system_radio_prop:property_service{  set };
+allow srtd init:unix_stream_socket{  connectto };
+allow shell firstboot_prop:file{  getattr open };
+allow shell boottime_prop:file{  getattr open };
+allow mediacodec property_socket:sock_file{  write };
+allow mediaserver system_prop:property_service{  set };
+allow installd system_prop:property_service{  set };
+allow vndservicemanager property_socket:sock_file{  write };
+allow shell net_dns_prop:file{  getattr open };
+allow mediametrics system_prop:property_service{  set };
+allow vndservicemanager system_prop:property_service{  set };
+allow storaged property_socket:sock_file{  write };
+allow kernel ylog_file:file{  write open create };
+allow servicemanager system_prop:property_service{  set };
+allow vndservicemanager init:unix_stream_socket{  connectto };
+allow phasecheckserver init:unix_stream_socket{  connectto };
+allow gatekeeperd init:unix_stream_socket{  connectto };
+allow shell opengles_prop:file{  getattr open };
+allow srtd property_socket:sock_file{  write };
+allow shell netd_stable_secret_prop:file{  getattr open };
+allow drmserver property_socket:sock_file{  write };
+allow refnotify system_prop:property_service{  set };
+allow netd system_prop:property_service{  set };
+allow shell radio_noril_prop:file{  getattr open };
+allow mediaextractor system_prop:property_service{  set };
+allow srtd system_prop:property_service{  set };
+allow storaged system_prop:property_service{  set };
+allow mediametrics property_socket:sock_file{  write };
+allow installd property_socket:sock_file{  write };
+allow keystore init:unix_stream_socket{  connectto };
+allow mediadrmserver property_socket:sock_file{  write };
+allow gatekeeperd property_socket:sock_file{  write };
+allow mediacodec media_prop:file{  read getattr open };
+allow shell safemode_prop:file{  getattr open };
+allow wificond system_prop:property_service{  set };
+allow kernel kernel:system{  syslog_mod };
+allow tombstoned init:unix_stream_socket{  connectto };
+allow gatekeeperd system_prop:property_service{  set };
+allow shell media_prop:file{  getattr open };
+allow tombstoned system_prop:property_service{  set };
+allow shell wifi_prop:file{  getattr open };
+allow shell storage_prop:file{  getattr open };
+allow servicemanager property_socket:sock_file{  write };
+allow installd init:unix_stream_socket{  connectto };
+allow shell persistent_properties_ready_prop:file{  getattr open };
+allow charge debugfs:file{  read open };
+allow phasecheckserver property_socket:sock_file{  write };
+allow mediadrmserver system_prop:property_service{  set };
+allow mediacodec system_prop:property_service{  set };
+allow mediametrics init:unix_stream_socket{  connectto };
+allow cameraserver system_prop:property_service{  set };
+allow tombstoned property_socket:sock_file{  write };
+allow tee system_prop:property_service{  set };
+allow charge init:unix_stream_socket{  connectto };
+allow kernel ylog_file:dir{  read write open add_name };
+allow servicemanager init:unix_stream_socket{  connectto };
+allow audioserver system_prop:property_service{  set };
+allow shell storageproxyd_default_prop:file{  getattr open };
+allow keystore system_prop:property_service{  set };
+allow shell dumpstate_options_prop:file{  getattr open };
+allow drmserver system_prop:property_service{  set };
+allow kernel kernel:capability2{  syslog };
+allow charge vendor_toolbox_exec:file{  execute_no_trans };
+allow charge property_socket:sock_file{  write };
+allow mediacodec init:unix_stream_socket{  connectto };
+allow adbd system_prop:property_service{  set };
+allow shell mmc_prop:file{  getattr open };

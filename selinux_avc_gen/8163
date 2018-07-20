@@ -1,0 +1,5 @@
+[   44.678483] <1>.(1)[184:logd.auditd]type=1400 audit(1262314980.330:8): avc: denied { write } for pid=6 comm="kworker/u8:0" name="misc" dev="dm-0" ino=406081 scontext=u:r:kernel:s0 tcontext=u:object_r:system_data_file:s0 tclass=dir permissive=1$
+[   44.682795] <1>.(1)[184:logd.auditd]type=1400 audit(1262314980.330:9): avc: denied { add_name } for pid=6 comm="kworker/u8:0" name="msaGSensorOffset.txt" scontext=u:r:kernel:s0 tcontext=u:object_r:system_data_file:s0 tclass=dir permissive=1$
+[   44.687606] <1>.(1)[184:logd.auditd]type=1400 audit(1262314980.330:10): avc: denied { create } for pid=6 comm="kworker/u8:0" name="msaGSensorOffset.txt" scontext=u:r:kernel:s0 tcontext=u:object_r:system_data_file:s0 tclass=file permissive=1$
+[   44.690998] <1>.(1)[184:logd.auditd]type=1400 audit(1262314980.330:11): avc: denied { write open } for pid=6 comm="kworker/u8:0" path="/data/misc/msaGSensorOffset.txt" dev="dm-0" ino=406447 scontext=u:r:kernel:s0 tcontext=u:object_r:system_data_file:s0 tclass=file permissive=1$
+
